@@ -1,0 +1,59 @@
+Website security review — 2026-10-11 (Asia/Shanghai)
+Scope: mannenzakura.cn application source, deployed Worker configuration, local request checks.
+
+Confirmed existing protections:
+- Admin and member login: database-backed 15 attempts / 15 minutes per IP.
+- Sessions: random tokens hashed in storage; HttpOnly, SameSite=Strict, Secure on HTTPS; 8-hour expiry.
+- Member files: login required; owner-only deletion; 500 KB streaming upload cap; MIME signature checks; maximum 10 files per member; sandboxed file responses.
+- AI chat: existing per-minute, daily IP, and global daily quotas retained.
+
+Changes:
+- Worker entry now dist/server/security-entry.js. npm postbuild regenerates it via scripts/prepare-security.mjs; do not deploy index.js directly.
+- AUTH_BURST: 10 requests/minute/IP before hashing/database access.
+- API_BURST: 120 requests/minute/IP before application access.
+- Cloudflare binding limits are per-location, best-effort burst mitigation, not a global distributed attack guarantee. Existing DB limits remain.
+- API mutating request origins checked; existing null-origin offline wallpaper support retained.
+- Streaming body ceilings: login 8 KiB; chat 20,000 bytes; files 512,000 bytes; admin bulk operations 2 MiB; remaining API 64 KiB. Missing Content-Length does not bypass limits.
+- Retired /api/lookup and /api/submit return 410, including decoded paths/trailing slash.
+- Dynamic and static security headers added: nosniff, same-origin framing, strict-origin-when-cross-origin referrers, camera/microphone/geolocation disabled. CSP only restricts base-uri, object-src and frame-ancestors; this is not a full script-src XSS policy. Existing file sandbox CSP preserved.
+- Public workers.dev endpoint retained; same Worker guard applies there.
+
+Validation:
+- node scripts/test-security.mjs passed.
+- Wrangler dry-run passed.
+- Local actual Worker: homepage/Earth 200 with headers; retired endpoints 410; unauthorized member file 401; foreign-origin POST 403; oversized no-business request 413; 11th auth request 429.
+
+Not verified:
+Current OAuth scopes do not include zone read or WAF settings permissions. DNS proxy mode, TLS mode, managed/custom WAF rules, bot controls, exceptions and security event logs have NOT been audited. These require access to the site's Cloudflare dashboard or appropriately scoped account access. No such permissions were expanded.
+No production password attempts, private data reads, or load tests were performed.
+
+Rollback:
+Previous deployment version: d245b9f4-301b-469e-8d9a-abdf491b4163 (interior redesign).
+Use Cloudflare deployment rollback if needed. For subsequent builds, preserve the security entry and rate-limit bindings; absent bindings intentionally reject API traffic with 503.
+
+Cloudflare dashboard follow-up — 2026-10-11
+Verified Free plan security settings: Cloudflare managed ruleset and HTTP DDoS protection Always active; Browser Integrity Check enabled. No custom rules initially (0/5); no custom allow/skip rules observed.
+Added active Block rule a589ef8936114e8bb250e400e63e5c23, named Block common secret and CMS scans, scoped to mannenzakura.cn. Matches /.env, /.env.*, /.git, /.git/*, /wp-login.php, /xmlrpc.php, /wp-config.php, /wp-admin/*.
+Enabled Always Use HTTPS (previously off); raised minimum TLS from 1.0 to 1.2; TLS 1.3 and Automatic HTTPS Rewrites remain enabled.
+Live checks after changes: HTTP root 301 -> HTTPS root; HTTPS root 200; /log 200; /wp-login.php 403.
+Certificates Active. SSL mode Full with automatic mode remains unchanged. HSTS, Bot Fight Mode not enabled in this pass. No paid upgrade.
+Scope limitation: dashboard baseline and targeted application audit, not a full penetration test; other subdomains/origin configurations not exhaustively audited. Cloudflare custom scan rule applies only to main hostname; Worker API guard is separate.
+Rollback: disable/delete the named custom rule in Security rules. Edge Certificates: Always Use HTTPS previously off; minimum TLS previously 1.0. Only revert if a demonstrated compatibility problem requires it.
+Evidence: <LOCAL_USER>/Documents/Codex/2026-10-07/ni/outputs/cloudflare-waf-active.png and cloudflare-https-tls.png.
+
+Second hardening pass — 2026-10-11
+- Disabled workers_dev and preview_urls using wrangler triggers deploy without replacing the live application bundle. Read back Worker subdomain API: enabled=false, previews_enabled=false.
+- Main site GET / 200. Unauthenticated /admin redirects 307; /api/admin and /api/admin/members return403 with no-store; /api/members/files returns401 with no-store. Companion availability endpoint 200.
+- Reviewed AI quotas: per-IP5/minute,30/day, global100/day; maximum650 output tokens. These are request quotas, not a precise monetary budget or a concurrency limit. Origin checks are not identity verification.
+- Exported complete D1 database to local backup. Restored into an isolated in-memory SQLite database; integrity_check and foreign_key_check passed (12 tables, zero member file records). No production restore performed.
+- Encrypted backup with Windows DPAPI CurrentUser and removed temporary plaintext; .private-backups excluded from Git and outside public assets. Reusable script scripts/backup-database.ps1 creates and verifies encrypted backup; -Verify <path.sql.dpapi> verifies existing copy in memory.
+- Backups require current Windows account/profile, and are NOT an off-device disaster recovery solution. Do not erase the Windows user profile assuming this file alone can be decrypted elsewhere. No scheduled backup created.
+- Admin Access additional identity layer pending administrator email supplied by user. No Access policy deployed; existing session authentication remains effective.
+- Full(strict), HSTS, detailed CSP, alerts and off-device backup are not changed in this pass.
+
+Access enabled — 2026-10-11
+Cloudflare Zero Trust Free. Created Mannenzakura Admin application c7f4b405-530d-4339-aedb-0097710908e3, with public destinations mannenzakura.cn/admin, /api/admin, /api/auth. Session24h; original app password session remains8h.
+Policy Owner email only c2d2537f-c79f-491e-862b-94fc0156a5a7: Allow, Include Emails exactly3549947495qq@gmail.com. Saved policy read back from dashboard.
+Added One-time PIN identity provider, limited application to One-time PIN (accept all providers off), instant auth enabled. No plan upgrade or paid add-ons enabled.
+Unauthenticated production checks: / and /log 200; /admin, /admin/members, /api/admin, /api/admin/members, /api/auth 302 to super-surf-8d0e.cloudflareaccess.com. User still must verify email delivery and end-to-end login.
+Public companion endpoint not placed behind Access; its configure action retains original admin session check. Full application-layer JWT verification not added in this pass.

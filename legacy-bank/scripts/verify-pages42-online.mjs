@@ -1,0 +1,6 @@
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync} from 'node:fs';
+const base='https://mannenzakura.cn';
+for(const file of ['app.js','life35.js','pages42.js','pages42.css','service37.js','closure39.js']){const r=await fetch(base+'/bank/'+file+'?verify=pages42');assert.equal(r.status,200);assert.equal(await r.text(),readFileSync('public/bank/'+file,'utf8'));}
+const post=(body,cookie='')=>fetch(base+'/api/bank',{method:'POST',headers:{origin:base,cookie,'content-type':'application/json'},body:JSON.stringify(body)});
+const entry=await post({action:'enterTest'});assert.equal(entry.status,200);const cookie=entry.headers.get('set-cookie').split(';')[0];const init=await post({action:'init'},cookie);assert.equal(init.status,200);const data=await init.json();assert.ok(data.state);assert.equal(data.commerce,null);const pending=await post({action:'commerceCreate',requestId:crypto.randomUUID(),sku:'mall-cup',destination:'TEST-HOME-001'},cookie);assert.equal(pending.status,503);writeFileSync('output/pages42-online.json',JSON.stringify({assets:'6 matched',api:'healthy',commerce:'disabled pending acceptance',at:new Date().toISOString()},null,2));console.log('PASS live assets, API health, pending-commerce gate');

@@ -1,0 +1,7 @@
+Accounts20 2026-10-11
+Worker 29300dd4-d2d5-4203-88bf-d5288fccb4c3 deployed.
+60 tests pass. Local browser verified I->II1000 transfer: main27652.40, II1000, independent incoming quota1000. Screenshot output/accounts20-verified.png.
+Live API using a fresh independent test cookie: new debit0, transfer1, repeated confirmation idempotent, two legs one transfer, conserved aggregate. Public app.js hash matches source.
+Card.balance is authoritative; state.balance is aggregate. cashAccountsVersion1 performs one-time migration. Allocate old card-bound plan/workflow reservations first, remainder to first debit card; no cash inflation. New cards0. Holdings migrate to original main; new investments retain funding card and redeem to it.
+Card.reserved/available derived from active plans/workflows. Transfers, repayment, schedules, subscription and workflow payments use their actual debit card balance. I/II quota computed per card from attributed history. Own transfers count both II non-bound sides, no binding exemptions implemented; excluded from report income/expense.
+Existing test credit fixtures now mutate individual card balances instead of obsolete aggregate.

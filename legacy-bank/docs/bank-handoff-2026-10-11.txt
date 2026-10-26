@@ -1,0 +1,39 @@
+个人银行模拟系统 · 2026-10-11 account14
+
+上线范围
+1. 持久账号：注册、跨设备登录、退出；会话七天过期，解锁十分钟过期，均不删除账号数据。
+2. 找回：注册时显示一次随机恢复密钥，服务端只保存摘要。恢复时重设两套密码并轮换密钥，所有旧会话失效。无短信、邮件及人工找回。
+3. 旧账户迁移：先从登录页“访问旧浏览器账户”解锁，再在个人中心绑定新账号，验证现有两套密码。原账本、卡面及计划保留。
+4. 消息与待办：计划到期/结果、订阅提醒、权益有效期、操作回执，支持已读和跳转。基于模拟时钟，不是后台定时推送。
+5. 回执：交易编号、时间、对象、类型、金额、状态、零模拟费用；操作确认明细与预约结果。TXT 下载均标注非真实银行凭证。
+6. 分步计划：每行一个步骤（最多十二步），手动完成；支持预算付款，密码确认后从预留预算记账；完成计划释放剩余预留。
+7. 比赛演示：六场景指引；首次载入切到独立演示账本，保留个人业务数据快照；结束恢复。演示仍需交易密码。
+
+数据和安全
+旧表 bank_demo_sessions 继续支持迁移；新表 bank_accounts 保存持久账号状态，bank_account_sessions 保存按设备分离的登录会话。
+密码独立加盐 PBKDF2-SHA256，凭证与恢复摘要不出接口；随机 Cookie 仅保存 SHA256，HttpOnly / SameSite=Strict / HTTPS Secure。
+账户状态 revision 乐观锁，交易确认单十分钟过期，回执防重复记账；登录、支付和找回有限次保护。
+注册/登录/找回使用现有 AUTH_BURST；全部接口继承站点 Origin 与 API 限流。
+Cookie 过期只丢登录状态；已迁移旧会话不能继续修改持久账户。修改密码与恢复操作使旧设备需重验。
+
+接口（同源 /api/bank）
+register: username, loginPassword, loginConfirm, paymentPassword, paymentConfirm, migrate（可选）
+login: username, password；返回 loginComplete 后 GET 当前状态
+recover: username, recoveryKey, 两套新密码及确认；返回一次性展示的新 recoveryKey
+logout / lock / unlock / changePassword / profile
+readNotification: id 或 all
+prepare: operation.type = transfer / split / buy / redeem / card / subscription / event / planPayment / cancelPlan / clock
+confirm: id, pin（独立转账密码）；服务器校验后向引擎传可信布尔值，客户端不能绕过。
+taskToggle: plan, task；completeEvent: id
+bookkeeping: 整数分；输入金额为元。
+demoSeed: scenario = transfer / bills / invest / cards / subscriptions / birthday；exitDemo 恢复个人账本。
+
+验证与发布
+node --test tests/bank.test.mjs tests/bank-accounts.test.mjs
+node scripts/prepare-security.mjs
+数据库只执行新增 drizzle/0006_bank_accounts.sql（CREATE IF NOT EXISTS），不重跑其他业务迁移。
+部署使用 wrangler.cloudflare.json。沿用已有 Workers/D1，不开通收费短信、邮件或模型服务。
+
+仍待真实项目对接
+真实银行/商户、正式身份核验、实时行情、外部通知、无人值守定时任务、大模型多轮工具规划与正式比赛文档。
+当前是可交互模拟系统；不能据此宣称已达到真实银行认证或全部比赛最终验收标准。

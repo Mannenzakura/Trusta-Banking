@@ -1,0 +1,61 @@
+/* Warm editorial surfaces: imagery belongs to campaigns, material to banking tasks. */
+html,body,#app,.layout{background:#fffaf3;color:#302b29}
+.layout .shell,.layout .workspace,.layout .main{background:transparent}
+.layout .workspace{background:radial-gradient(ellipse at 92% 0%,#edd5b850,transparent 48%),radial-gradient(ellipse at 2% 40%,#f7e6db70,transparent 40%)}
+.layout .sidebar{background:#fffdf8;border-bottom:1px solid #e7dccb}
+.layout .topbar{background:#fffdf9cc;border-bottom:1px solid #eee3d7;backdrop-filter:blur(18px)}
+.layout .heading{position:relative;padding:28px 0 25px;margin-bottom:28px;border-bottom:1px solid #dfc8a580;gap:20px}
+.layout .heading:after{content:'';position:absolute;bottom:-2px;left:0;width:52px;height:3px;background:linear-gradient(90deg,#ba8e4c,#ead2a7)}
+.layout .heading h1{font-size:clamp(28px,3vw,38px);letter-spacing:-1px;font-weight:650}
+.layout .heading p{margin-top:12px;line-height:1.8;color:#73645a}
+.layout :is(.panel,.transfer-compose,.card-control-room,.investment-product,.receipt-document,.renewal-item,.plan-composer,.risk-disclosure,.bank-editorial,.profile-settings>section){border:1px solid #e8dccd;background:linear-gradient(155deg,#fff 0%,#fffdf9 100%);box-shadow:0 2px 3px #69472203,0 18px 45px -26px #80572c42;border-radius:24px}
+.layout :is(.bank-home-stage,.bank-wealth-heading,.bank-life-hero,.benefit-banner){border:1px solid #e8d6bb;border-radius:28px;box-shadow:0 20px 50px -28px #78522e66;overflow:hidden}
+.layout .campaign-copy{padding:42px!important;background:radial-gradient(ellipse at 0% 0%,#ffffffdd,transparent 70%),linear-gradient(135deg,#fffaf0,#f1dfc4)}
+.layout .campaign-copy h1,.layout .campaign-copy h2{font-weight:600;line-height:1.4;letter-spacing:-1px;color:#503a29}
+.layout .campaign-art{isolation:isolate}.layout .campaign-art:after{content:'';position:absolute;inset:0;pointer-events:none;box-shadow:inset 14px 0 45px #5a36120a;background:linear-gradient(130deg,#fff8e71c,transparent 50%)}
+.layout .campaign-art img{object-position:center 57%;filter:saturate(.88) contrast(1.03)}
+.layout .bank-life-teaser.campaign-teaser{overflow:hidden;background:#faf1e2;border:1px solid #e5d2b7;box-shadow:0 20px 45px -30px #73512c80}
+.layout .bank-service-panel{background:#fffcf7;border:1px solid #eadfd0;box-shadow:0 10px 35px -25px #684a2b55;border-radius:24px;margin-top:24px}
+.layout .bank-service-grid button{transition:transform .18s ease,background .18s ease}.layout .bank-service-grid button:hover{transform:translateY(-3px);background:#faf0df}
+.layout .bank-service-icon{background:linear-gradient(145deg,#fff,#f4e8d4);box-shadow:inset 0 1px #fff,0 4px 10px #80633b14;border:1px solid #e6d6bd;border-radius:15px;width:48px;height:48px;padding:8px;box-sizing:border-box;color:#977344}
+.layout .bank-product-previews button{background:linear-gradient(145deg,#fff,#fbf2e3);border:1px solid #e7d5ba;padding:25px;box-shadow:inset 0 1px #fff}
+.layout .bank-product-previews strong{font-size:28px;letter-spacing:-.6px}
+.layout .method-picker{gap:14px}.layout .method-picker button{background:linear-gradient(135deg,#fff,#fffaf1);border:1px solid #e6d9c7;padding:22px;border-radius:18px;box-shadow:0 7px 20px -16px #735b3690}
+.layout .method-picker button[aria-pressed=true]{background:linear-gradient(125deg,#fff8f5,#fce8e4);border-color:#d58482;box-shadow:inset 0 3px #c92840,0 9px 20px -16px #a33847}
+.layout .transfer-compose{padding:34px}.layout .transfer-amount{padding:26px 24px;background:linear-gradient(120deg,#fdf5e7,#fffdf8);border:1px solid #ead9be;border-radius:20px}
+.layout .transfer-amount input{background:transparent;border-bottom:1px solid #d7c09b;font-size:42px;color:#3d3023;font-variant-numeric:tabular-nums}
+.layout .transfer-pocket{background:repeating-linear-gradient(115deg,#ffffff12 0 1px,transparent 1px 7px),linear-gradient(145deg,#f3e2c8,#fff8ec 55%,#e8d2b0);border:1px solid #d8bd92;box-shadow:inset 0 1px #fff,0 18px 45px -28px #80603970;border-radius:24px}
+.layout .transfer-pocket dl>div{border-color:#ceb68f66}.layout .recipient-choice label{background:#fffefa;border-color:#e6dccf;box-shadow:0 3px 9px #7e5e2d08}
+.layout .recipient-choice label:has(input:checked){background:#fff3ec;border-color:#d48583}.layout .recipient-avatar{background:linear-gradient(135deg,#f6e5c6,#e3caa3);box-shadow:inset 0 1px #fff9;color:#795b35}
+.layout :is(.investment-intro,.planning-outlook,.subscription-outlook,.bank-account-link){position:relative;background:radial-gradient(ellipse at 75% -40%,#fff 0%,transparent 70%),repeating-linear-gradient(120deg,#ffffff16 0 1px,transparent 1px 9px),linear-gradient(110deg,#f3dfba,#fff6e6 60%,#e9d4ad);border:1px solid #dfc79e;box-shadow:inset 0 1px #fff,0 18px 42px -30px #79512070;border-radius:24px}
+.layout .product-spec{border-color:#e9dcc9}.layout .investment-product{overflow:hidden;border-top:3px solid #c5a26a}.layout .product-head h3{font-size:23px;font-weight:650}.layout .product-purchase{background:#fffaf3;border-color:#e6d7c2}
+.layout details[open]>summary{background:linear-gradient(110deg,#faf1e2,#fffdf8);border-color:#e6d7c3}.layout .service-form-heading{border-color:#e7d9c6}
+.layout :is(input,select,textarea){border-color:#d9ccbc;box-shadow:inset 0 2px 4px #59401e04}.layout :is(.receipt-sheet,.receipt-detail,.timeline-detail,.renewal-detail){background:linear-gradient(150deg,#fffefb,#fbf5e9);border-color:#eadcc6}
+.layout .receipt-sheet>div{border-color:#decfb8}.layout .receipt-document{border-top:3px solid #c4a26a}.layout .receipt-document summary strong{font-size:18px}
+.layout :is(.credit-hub,.card-showroom){background:linear-gradient(145deg,#fffcf6,#f7eddc);border-color:#dfcba9;box-shadow:inset 0 1px #fff}
+.layout .workspace-switch{background:#f0e4d2;border:1px solid #e2ceb0}.layout .wallet-item{background:#fffaf2;border-color:#e7d5bb}.layout .retail-coupon{border:1px solid #e4ceaa;background:linear-gradient(120deg,#fffdf8,#f8ecd7);box-shadow:0 14px 32px -24px #84613866}
+.layout .gold-hero{box-shadow:0 24px 50px -30px #0d233a99;border:1px solid #465b68}.layout .gold-balance{background:radial-gradient(ellipse at 90% 0%,#e4bd6320,transparent 65%),repeating-linear-gradient(120deg,#ffffff04 0 1px,transparent 1px 8px),linear-gradient(120deg,#0d243b,#21425b);border:1px solid #536170;box-shadow:inset 0 1px #c7ad7444}.layout .gold-product{border-top:3px solid #c4a16a;box-shadow:0 16px 40px -28px #70562c55}
+#confirm{border:1px solid #ddcbb0;box-shadow:0 40px 110px #3727144d;border-radius:26px}#confirm::backdrop{background:#2d241f70;backdrop-filter:blur(8px)}
+#confirm .modal{background:radial-gradient(ellipse at 100% 0%,#edd8b940,transparent 48%),#fffefa;padding:32px}
+#confirm .confirmation-heading{padding:10px 0 16px;border-bottom:1px solid #eadcc6}#confirm .confirmation-symbol{box-shadow:inset 0 1px #fff,0 8px 20px #a8354214}
+#confirm .confirmation-details{background:linear-gradient(140deg,#fffdf8,#f8efdf);border-color:#e2cfaf;box-shadow:inset 0 1px #fff}#confirm .confirmation-details p{border-color:#e3d4bd}
+#confirm .result-amount{background:linear-gradient(115deg,#f6e7cb,#fffaf0,#efdebf);border:1px solid #e0c79e;border-radius:18px;margin-top:24px;box-shadow:inset 0 1px #fff}#confirm .result-amount strong{font-size:42px;color:#443222;letter-spacing:-1px}
+#confirm .result-seal{box-shadow:0 0 0 8px #edf5ed80,0 8px 28px #41634212}#confirm .form-footer{background:#fffefa;border-color:#e3d4bd}#confirm .benefit-detail-ticket{background:radial-gradient(ellipse at 75% 0%,#fff 0%,transparent 60%),linear-gradient(130deg,#f0dfbc,#fff7e7);border:1px solid #dfc9a3;box-shadow:inset 0 1px #fff}
+.layout .btn.primary,#confirm .btn.primary{background:linear-gradient(135deg,#d7354d,#bd233a);box-shadow:inset 0 1px #ef7889,0 7px 17px #ba24391d}.layout .btn.primary:hover,#confirm .btn.primary:hover{background:linear-gradient(135deg,#c92b43,#a91e33)}
+@media(max-width:760px){.layout .main{background:transparent}.layout .workspace{background:radial-gradient(ellipse at 100% 0%,#efdec366,transparent 55%),#fffaf3}.layout .heading{padding:18px 0 22px;margin-bottom:22px}.layout .campaign-copy{padding:28px 24px!important}.layout .campaign-art{max-height:260px}.layout .method-picker{gap:10px}.layout .method-picker button{padding:17px}.layout .transfer-compose{padding:20px}.layout .transfer-amount{padding:20px 16px}.layout .transfer-amount input{font-size:34px}.layout .bank-service-icon{width:42px;height:42px}.layout .bank-service-grid{gap:7px}.layout .bank-service-grid strong{font-size:13px}.layout .bank-mobile-tabs{background:#fffdf8f5;border-color:#e5d8c4}#confirm .modal{padding:24px 18px}#confirm .result-amount strong{font-size:34px}#confirm .modal .form-footer{background:#fffefa}.layout .panel{padding:20px}}
+@media(prefers-reduced-motion:reduce){.layout .bank-service-grid button{transition:none;transform:none}.layout .campaign-art img{transition:none}}
+/* Complete shared surfaces without touching card themes or market direction colors. */
+.layout :is(.schedule-choice,.bank-notice,.notice,.card-limit-display,.statement-detail,.gold-record-detail .retail-record,.investment-holdings .subscription){background:linear-gradient(125deg,#fffaf2,#f7eddf);border-color:#e4d5be;color:#514439}
+.layout :is(.recipient-directory article,.bank-personal-hub,.bank-personal-spending,.bank-guide,.credit-actions form,.password-setting,.event-editor,.gold-record-detail){background:#fffdf9;border-color:#e7d9c5;box-shadow:0 12px 32px -25px #79542d50}
+.layout :is(.field,.detail-list dt,.detail-list dd,.wallet-item strong,.wallet-item small,.upload-label,.theme-options legend,.ink-controls legend,.theme-options label,.crop-range,.audit-row,.audit-row strong,.schedule-choice,.bank-service-grid strong){color:#514439}
+.layout .transfer-amount input::placeholder{color:#8d7b67;opacity:1}.layout .transfer-amount>span{color:#8d7b67}
+.layout .bank-wealth-tabs{background:#fffcf7;border-color:#e4d5be}
+.layout .bank-guide summary{color:#514439}.layout .bank-guide details+details{border-color:#e7d9c5}
+.assistant{background:#fffdf9;border-color:#ddc9ad;box-shadow:0 24px 80px #60462930}.assistant-head{background:linear-gradient(120deg,#f1dfc0,#fff7e8);border-color:#dec9a8;color:#493727}.assistant-head small{color:#78654e}.assistant-logo{background:#fff8eb;color:#9a7037;box-shadow:inset 0 1px #fff}.assistant-close{color:#544333}
+.assistant .bubble{background:#f7efe2;color:#443b32;border:1px solid #e8d9c4}.assistant .bubble.user{background:#fbe9e7;color:#69353d;border-color:#efc8cb}.assistant .suggestions button{color:#65513a;background:#fffaf0;border-color:#dfcdae}.assistant .chat-compose textarea{background:#fffefb;color:#443b32;border-color:#d8c6ad}.assistant :is(.compose-footer small,.chat-foot){color:#796b5c}.assistant .btn.primary{background:#c92840;color:#fff}.assistant-scrim{background:#382b2040}
+#confirm .modal :is(input,select,textarea){border-color:#d8c6ad;background:#fffefb;color:#39312b}#confirm .modal label{color:#514439}#confirm .modal :is(input,select,textarea):focus-visible{outline:3px solid #e99caa;outline-offset:3px}#confirm .modal ul{color:#514439}
+#confirm #search-results button{background:#fffaf1;border:1px solid #e5d5ba;color:#514439}#confirm .modal .error{color:#ac2237}
+@media(max-width:760px){.layout .bank-wealth-tabs{gap:8px;padding:16px}.layout .bank-wealth-tabs button{min-height:44px}.layout .campaign-art{min-height:190px}.assistant-head{padding:18px}.assistant .suggestions{flex-wrap:wrap}.assistant .chat-compose{padding-bottom:env(safe-area-inset-bottom)}#confirm .modal :is(input,select,textarea){font-size:16px}#confirm .modal{overflow-wrap:anywhere}.layout .retail-record{overflow-wrap:anywhere}}
+#confirm .btn:not(.primary):not(.danger){background:#fffdf8;color:#65503c;border-color:#d9c6aa}#confirm .benefit-detail-ticket .result-seal{background:linear-gradient(145deg,#fff9e9,#ebd6ae);color:#8a632e;box-shadow:inset 0 1px #fff,0 8px 22px #9774441a}#confirm .benefit-detail-ticket .tag{background:#f5ead4;color:#795a32}
+/* Drawer sits above both sticky navigation layers; dialog retains native top layer. */
+.assistant-scrim{z-index:120}.assistant{z-index:121}

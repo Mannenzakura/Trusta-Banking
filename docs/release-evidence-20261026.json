@@ -1,0 +1,261 @@
+{
+  "date": "2026-10-26",
+  "scope": "source review; virtual funds; no live banking",
+  "verdict": "NOT_ALL_TESTS_PASSED",
+  "merge_rule": "Latest targeted testcase result supersedes earlier result; successfully recollected modules supersede collection errors. Counts exclude subtests and do not add repeated runs.",
+  "unique_python_tests": {
+    "passed": 1537,
+    "error": 0,
+    "failure": 17,
+    "skipped": 0
+  },
+  "runs": [
+    {
+      "file": "final-all-20261026.xml",
+      "sha256": "2ae31cdd10c076a7fae5318f8fad2ca8ec2718b97472fab18e14e5cbf97581bc",
+      "counts": {
+        "error": 19,
+        "passed": 1323,
+        "failure": 33,
+        "skipped": 6
+      }
+    },
+    {
+      "file": "final-business-20261026.xml",
+      "sha256": "478f1dcb7d03e82cc0ebe24ad01554391c34040893d53cc0cdbddeb35c397783",
+      "counts": {
+        "passed": 158
+      }
+    },
+    {
+      "file": "optional-recheck.xml",
+      "sha256": "42f1c42c238f4aad25be00d493793a40462ed8e7edbf0b972c77093e08ae5fb5",
+      "counts": {
+        "passed": 129,
+        "failure": 10
+      }
+    },
+    {
+      "file": "process313-venv-recheck.xml",
+      "sha256": "2f342034b8eb7a71c76ed0b8375e0f8e54b116593b5fcc64b42bdda07ab68b90",
+      "counts": {
+        "passed": 14
+      }
+    },
+    {
+      "file": "collaboration-export-recheck.xml",
+      "sha256": "39563d24ad5a37627411c511fa25d0acefbbdd31e4bcd07c591923d28c65ea54",
+      "counts": {
+        "passed": 10
+      }
+    },
+    {
+      "file": "remaining-recheck.xml",
+      "sha256": "b67fe9ae671c9488a93b19b7ab83bf26d70b5a01d34cc85a29d5e1a614e9df25",
+      "counts": {
+        "passed": 159
+      }
+    },
+    {
+      "file": "release-targeted.xml",
+      "sha256": "999b8c512ca2d4782e517a6478f940af3b0752d2ea0157cd7565090a94c531c4",
+      "counts": {
+        "passed": 18
+      }
+    },
+    {
+      "file": "privacy-recheck-20261026.xml",
+      "sha256": "622ff79c1526f00df2699499e364336b03957813803c914dad87e2ecc550d7ed",
+      "counts": {
+        "passed": 6
+      }
+    },
+    {
+      "file": "anchor-capability-recheck-20261026.xml",
+      "sha256": "13c38ff37ac2ce4154f8816dc26525a664df8875b99ca7954207c90863a5ab2e",
+      "counts": {
+        "passed": 19
+      }
+    }
+  ],
+  "unresolved": [
+    {
+      "test": "tests.test_anchor_evaluator.TrustedCapabilityEvaluatorTests::test_frozen_raw_source_hash_mismatch_rejected",
+      "status": "failure",
+      "evidence": "final-all-20261026.xml"
+    },
+    {
+      "test": "tests.test_anchor_evaluator.TrustedCapabilityEvaluatorTests::test_frozen_real_mimo_twenty_goals_recomputed",
+      "status": "failure",
+      "evidence": "final-all-20261026.xml"
+    },
+    {
+      "test": "tests.test_anchor_evaluator.TrustedCapabilityEvaluatorTests::test_gold_substitution_rejected",
+      "status": "failure",
+      "evidence": "final-all-20261026.xml"
+    },
+    {
+      "test": "tests.test_anchor_evaluator.TrustedCapabilityEvaluatorTests::test_real_execution_of_incomplete_deepseek_plan_is_not_goal_success",
+      "status": "failure",
+      "evidence": "final-all-20261026.xml"
+    },
+    {
+      "test": "tests.test_anchor_fisco_boundary.RecordedFiscoVerificationTests::test_actual_recorded_deployment_verifies",
+      "status": "failure",
+      "evidence": "final-all-20261026.xml"
+    },
+    {
+      "test": "tests.test_anchor_fisco_boundary.RecordedFiscoVerificationTests::test_changed_calldata_rejected",
+      "status": "failure",
+      "evidence": "final-all-20261026.xml"
+    },
+    {
+      "test": "tests.test_anchor_fisco_boundary.RecordedFiscoVerificationTests::test_changed_chain_readback_rejected",
+      "status": "failure",
+      "evidence": "final-all-20261026.xml"
+    },
+    {
+      "test": "tests.test_anchor_fisco_boundary.RecordedFiscoVerificationTests::test_changed_event_rejected",
+      "status": "failure",
+      "evidence": "final-all-20261026.xml"
+    },
+    {
+      "test": "tests.test_anchor_fisco_boundary.RecordedFiscoVerificationTests::test_changed_runtime_code_rejected",
+      "status": "failure",
+      "evidence": "final-all-20261026.xml"
+    },
+    {
+      "test": "tests.test_anchor_fisco_boundary.RecordedFiscoVerificationTests::test_failed_fisco_status_rejected",
+      "status": "failure",
+      "evidence": "final-all-20261026.xml"
+    },
+    {
+      "test": "tests.test_anchor_fisco_boundary.RecordedFiscoVerificationTests::test_other_publisher_rejected",
+      "status": "failure",
+      "evidence": "final-all-20261026.xml"
+    },
+    {
+      "test": "tests.test_anchor_fisco_boundary.RecordedFiscoVerificationTests::test_real_recorded_receipt_event_readback_verifies",
+      "status": "failure",
+      "evidence": "final-all-20261026.xml"
+    },
+    {
+      "test": "tests.test_anchor_fisco_boundary.RecordedFiscoVerificationTests::test_reorged_block_rejected",
+      "status": "failure",
+      "evidence": "final-all-20261026.xml"
+    },
+    {
+      "test": "tests.test_anchor_fisco_boundary.RecordedFiscoVerificationTests::test_rpc_scope_cannot_select_public_chain",
+      "status": "failure",
+      "evidence": "final-all-20261026.xml"
+    },
+    {
+      "test": "tests.test_anchor_fisco_boundary.RecordedFiscoVerificationTests::test_wrong_creation_bytecode_rejected",
+      "status": "failure",
+      "evidence": "final-all-20261026.xml"
+    },
+    {
+      "test": "tests.test_anchor_fisco_boundary.IndependentVerifierTrustPinTests::test_self_supplied_contract_cannot_replace_pinned_contract",
+      "status": "failure",
+      "evidence": "final-all-20261026.xml"
+    },
+    {
+      "test": "tests.test_anchor_fisco_boundary.IndependentVerifierTrustPinTests::test_self_supplied_publisher_cannot_replace_pinned_publisher",
+      "status": "failure",
+      "evidence": "final-all-20261026.xml"
+    }
+  ],
+  "browser": {
+    "checks": 51,
+    "widths": [
+      360,
+      390,
+      1440
+    ],
+    "flows": [
+      "deposit proposal/refusal leaves balance unchanged",
+      "deposit explicit confirmation debits exactly once on double click",
+      "deposit survives page reload",
+      "failed read displays recoverable error"
+    ],
+    "uncaught_errors": [],
+    "environment": "disposable local virtual database; headless Edge"
+  },
+  "frontend_and_worker_tests": {
+    "passed": 6,
+    "failed": 0
+  },
+  "dependency_audit": {
+    "runtime_python_known_vulnerabilities": 0,
+    "npm_known_vulnerabilities": 0,
+    "optional_research_dependencies_audited": false
+  },
+  "live_model_checks": [
+    {
+      "case": "transfer",
+      "understanding": "deepseek",
+      "tools": [
+        "propose_transfer"
+      ],
+      "fallback_reason": null,
+      "card_types": [
+        "confirm"
+      ],
+      "confirmations_refused": 1,
+      "balances_unchanged": true
+    },
+    {
+      "case": "travel",
+      "understanding": "deepseek",
+      "tools": [
+        "life_service"
+      ],
+      "fallback_reason": null,
+      "card_types": [
+        "life"
+      ],
+      "confirmations_refused": 0,
+      "balances_unchanged": true
+    },
+    {
+      "case": "scope",
+      "understanding": "scope",
+      "tools": [],
+      "fallback_reason": null,
+      "card_types": [],
+      "confirmations_refused": 0,
+      "balances_unchanged": true
+    }
+  ],
+  "limits": [
+    "Not an absolute security guarantee",
+    "No real payment or real ticket issuance",
+    "Missing historical signed evaluation and FISCO evidence",
+    "No full natural-language live-model business coverage",
+    "This source snapshot has not replaced the running public deployment"
+  ],
+  "clean_room_export_verification": {
+    "manifest_verified": true,
+    "fresh_virtual_backend": true,
+    "frontend_http": 200,
+    "unauthenticated_finance_rejected": true,
+    "authenticated_finance_read": true,
+    "model_unconfigured": true,
+    "used_existing_python_dependencies": true
+  },
+  "development_proof_artifacts": {
+    "privacy_tests_passed": 6,
+    "anchor_tests_passed": 19,
+    "production_ready": false
+  },
+  "portable_verification": {
+    "bundled_python": "Python 3.14.10",
+    "supervised_launcher": true,
+    "frontend_http": 200,
+    "unauthenticated_finance_rejected": true,
+    "finance_and_extensions_read": true,
+    "fresh_virtual_database": true,
+    "model_unconfigured": true,
+    "used_existing_python_dependencies": false
+  }
+}

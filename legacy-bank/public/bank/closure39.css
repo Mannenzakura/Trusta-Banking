@@ -1,0 +1,10 @@
+.closure39-catalog{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px 0}
+.closure39-catalog>details{margin:0;min-width:0;align-self:start}
+.closure39-catalog summary{cursor:pointer;line-height:1.7;padding:8px 0}
+.closure39-catalog .form-grid{grid-template-columns:1fr}
+#closure39-booking .panel,#closure39-booking .retail-record{overflow-wrap:anywhere}
+@media(max-width:700px){
+ .closure39-catalog{grid-template-columns:1fr}
+ .wallet-scene{overflow:hidden}
+ .wallet-card-frame,.wallet-card-frame .payment-card{transform:none!important;animation:none!important}
+}

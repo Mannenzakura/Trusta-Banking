@@ -1,0 +1,13 @@
+import {BankError} from './bank-engine.mjs';
+const encode=b=>Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,'0')).join('');
+async function derive(password,salt){const material=await crypto.subtle.importKey('raw',new TextEncoder().encode(password),'PBKDF2',false,['deriveBits']);return encode(await crypto.subtle.deriveBits({name:'PBKDF2',salt:Uint8Array.from(salt.match(/../g),h=>parseInt(h,16)),iterations:100000,hash:'SHA-256'},material,256));}
+export async function credential(password,format='password'){const salt=encode(crypto.getRandomValues(new Uint8Array(16)));return {format,salt,hash:await derive(password,salt),algorithm:'PBKDF2-SHA256',iterations:100000};}
+export async function verify(password,record){if(typeof password!=='string'||password.length>128||!record)return false;const actual=await derive(password,record.salt);let difference=actual.length^record.hash.length;for(let i=0;i<actual.length;i++)difference|=actual.charCodeAt(i)^record.hash.charCodeAt(i);return difference===0;}
+export function validatePassword(value){if(typeof value!=='string'||value.length<12||value.length>128||!/[a-zA-Z]/.test(value)||!/[0-9]/.test(value))throw new BankError('密码须为 12–128 位，并包含字母和数字。');}
+
+export function validatePaymentPassword(value){if(typeof value!=='string'||!/^\d{6}$/.test(value))throw new BankError('转账密码必须是 6 位数字。');}
+// RFC 6238 authenticator codes; secret stays in the server-side security object.
+const alphabet='ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
+export function newTotpSecret(){const bytes=crypto.getRandomValues(new Uint8Array(20));let bits=0,value=0,out='';for(const b of bytes){value=(value<<8)|b;bits+=8;while(bits>=5){out+=alphabet[(value>>>(bits-5))&31];bits-=5;}}return out;}
+export async function totpCode(secret,step){let bits=0,value=0,bytes=[];for(const ch of secret){const n=alphabet.indexOf(ch);if(n<0)throw new Error('Invalid secret');value=(value<<5)|n;bits+=5;if(bits>=8){bytes.push((value>>>(bits-8))&255);bits-=8;}}const key=await crypto.subtle.importKey('raw',new Uint8Array(bytes),{name:'HMAC',hash:'SHA-1'},false,['sign']);const counter=new Uint8Array(8);new DataView(counter.buffer).setBigUint64(0,BigInt(step));const h=new Uint8Array(await crypto.subtle.sign('HMAC',key,counter)),offset=h[19]&15;const n=((h[offset]&127)<<24)|(h[offset+1]<<16)|(h[offset+2]<<8)|h[offset+3];return String(n%1000000).padStart(6,'0');}
+export async function verifyTotp(secret,code,last=-1,now=Date.now()){if(typeof code!=='string'||!/^\d{6}$/.test(code))return null;const current=Math.floor(now/30000);for(const step of [current,current-1,current+1])if(step>last&&await totpCode(secret,step)===code)return step;return null;}

@@ -1,0 +1,9 @@
+{
+  "mode": "built-in image_gen",
+  "assets": "public/bank/assets/campaign22/{home,wealth,life}.webp",
+  "prompts": {
+    "home": "Premium banking lifestyle campaign photography, landscape 3:2. A sculptural ivory perpetual desk calendar with blank unnumbered leaves, elegant champagne satin ribbon, cream gift box and small fresh apricot flowers on warm limestone plinths. Rich tactile paper grain, brushed gold detail, natural cinematic afternoon sunlight, believable soft shadows, luxurious editorial still life, close-up meticulous realistic materials. Objects composed center-right, pale warm cream surroundings. No text, letters, numbers, logos, UI, watermark or money.",
+    "wealth": "Premium financial editorial still life, landscape 3:2. Two finely textured unmarked gold ingots beside an exquisite clear glass hourglass with pale sand, sitting on cream travertine and warm blush stone. Photoreal luxury product photography, controlled gold reflections, precise glass refraction, soft sunlight, subtle shadows, refined museum-like composition, center-right objects with airy surrounding space. No text, numbers, logos, coins flying, charts, arrows, UI or watermark.",
+    "life": "Premium lifestyle banking campaign editorial photograph, landscape 3:2. Beautiful white porcelain cappuccino with realistic latte art, flaky croissant on small ceramic plate, compact cream travel camera and folded blank travel notebook on sunlit peach limestone café table, soft green olive foliage at edge. Rich realistic material details, natural warm daylight, refined luxury magazine photography, inviting uncluttered composition. No text, brands, letters, logos, UI, watermark or people."
+  }
+}

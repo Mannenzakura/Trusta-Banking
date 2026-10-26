@@ -1,0 +1,3 @@
+Airport directory: https://github.com/datasets/airport-codes ; upstream OurAirports. Downloaded 2026-10-13. Filter medium/large airports with unique IATA code; directory is not flight inventory. Common Chinese city aliases added locally.
+UX reference: user supplied Ctrip screenshot and https://flights.ctrip.com/online/channel/domestic
+Ctrip partner integration: https://openapi.ctripbiz.com/ and https://pages.ctrip.com/public/dlhz.htm . No partner credentials or paid services enabled.

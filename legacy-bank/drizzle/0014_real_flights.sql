@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS bank_real_flight_cache(id TEXT PRIMARY KEY,data TEXT,expires INTEGER NOT NULL,locked_until INTEGER NOT NULL DEFAULT 0);
+CREATE TABLE IF NOT EXISTS bank_real_flight_budget(id TEXT PRIMARY KEY,reserved INTEGER NOT NULL);
+INSERT OR IGNORE INTO bank_real_flight_budget VALUES('gift52',150);
+CREATE TABLE IF NOT EXISTS bank_real_flight_rate(id TEXT PRIMARY KEY,at INTEGER NOT NULL);

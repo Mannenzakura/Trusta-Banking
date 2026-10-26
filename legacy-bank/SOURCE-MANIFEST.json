@@ -1,0 +1,1386 @@
+{
+  "status": "archived reference; not active deployment",
+  "source": "frozen original banking project snapshot",
+  "files": [
+    {
+      "path": ".env.example",
+      "sha256": "7364013ae466ce1474271edeb9d4fa0c0335419312ec37b34df24ee17597ab49"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "1205b6dd6ddcdc4196f163b24a2b42bbce106386e754a39c7054e397b0088dd3"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "a2cdcd4d4c1920532d7b241e3d3fbba1a90417a9cb6d6cd1490286ab3f4fed4b"
+    },
+    {
+      "path": "package.json",
+      "sha256": "4eaa302d07e5489f843ee94f95ba1fa1b0f83022a720b789b6ab5a67d0fcd448"
+    },
+    {
+      "path": "docs/alipay40-acceptance.txt",
+      "sha256": "96e0d2170ded31a232b7c6a39a8f63838e678d795a96cf724976161d602ec764"
+    },
+    {
+      "path": "docs/bank-accounts20-handoff.txt",
+      "sha256": "c29c1545ebe4192e81d5e096ee9648b38f50574dfd29965ac59f39ab567b73fc"
+    },
+    {
+      "path": "docs/bank-agent17-handoff.txt",
+      "sha256": "83b019ab328dba92dfd3bd96b66ad608e8bbc086e7672f223a2629c61d0d596c"
+    },
+    {
+      "path": "docs/bank-business32-handoff.txt",
+      "sha256": "d882fe817863c157095c7eaf594515cd2c773b065c90d3f2edb3c9e8765335b6"
+    },
+    {
+      "path": "docs/bank-closure39-acceptance.txt",
+      "sha256": "c487a8b6b68949500ac0303d11b3c7df7962acbd9127fc340e4bd46368cf3e23"
+    },
+    {
+      "path": "docs/bank-core33-handoff.txt",
+      "sha256": "35303ebb5d29ab464f2cd559907e87c66602434d7525825f4abe9ed8efac56de"
+    },
+    {
+      "path": "docs/bank-credit19-handoff.txt",
+      "sha256": "33ad85b0b7529aae04e214e1161765f2af5112e4e17e3d6cc36fcf79a95eccc7"
+    },
+    {
+      "path": "docs/bank-finance34-handoff.txt",
+      "sha256": "bb9a55c14eb80cf469c7ce5acf8e3dbc1ce85cf29c8e7a8452fe71c07ebdda62"
+    },
+    {
+      "path": "docs/bank-flows26-handoff.txt",
+      "sha256": "84f53b9b87dd6a20a932c710b36335cb776e291279fde7f9b23d90e023a33d87"
+    },
+    {
+      "path": "docs/bank-handoff-2026-10-11.txt",
+      "sha256": "5872852e275a5f480f65e096f37a16a991e2a80d72fe372267bfed32fa2eea9a"
+    },
+    {
+      "path": "docs/bank-life35-handoff.txt",
+      "sha256": "ec8eb155dc687fcd143cf4007f1df4d4a8ad031a6975ce9c0f81881e72fd8c8f"
+    },
+    {
+      "path": "docs/bank-life36-handoff.txt",
+      "sha256": "d2e28bac0b8d050496f05b809c993c96885e41ba9d69572df34c1922a36873a6"
+    },
+    {
+      "path": "docs/bank-retail21-handoff.txt",
+      "sha256": "f4de3a9d18b21ce8c0ca9bd813b067e98148a2779bc02c3c03914a5f738fd1a6"
+    },
+    {
+      "path": "docs/bank-retail23-handoff.txt",
+      "sha256": "6c180ca16014e07c7c4a6a69dfef194fef1588368f5eb007f86ce5c67789b470"
+    },
+    {
+      "path": "docs/bank-service37-global-audit.txt",
+      "sha256": "550d5a03652e28e7e36d69b02dc5e72c3b61d99c9bbba78a59e4791d5c1f2982"
+    },
+    {
+      "path": "docs/campaign22-prompts.json",
+      "sha256": "85c169757a9c2131b139facd51710ae4b68134f2ff93bc9340da4a91cf7506d4"
+    },
+    {
+      "path": "docs/commerce41-acceptance.txt",
+      "sha256": "f5582afd0ea1e418b0ef8f1b267ea563450d28a37f8c80135fedd85c86efb3c0"
+    },
+    {
+      "path": "docs/deepseek-handoff-audit.md",
+      "sha256": "da94b55bf7832814e1d97b9208d4c834a3071b0e3db509134b71bd8dc8c67bea"
+    },
+    {
+      "path": "docs/flight44-sources.txt",
+      "sha256": "5581f9336f483c0c9156ad23d0a829e2f9bc37f6398260bde1c816a84292ff70"
+    },
+    {
+      "path": "docs/glm-handoff-audit.md",
+      "sha256": "934a9b7fc258dea40a6c4c5d6c58154da7085d4d501322c55ee10940c615680b"
+    },
+    {
+      "path": "docs/pages42-acceptance.txt",
+      "sha256": "bb46dd9ae8b1858d15ab25bee78826e23ece12e8dfedc5837a9d8554f423f826"
+    },
+    {
+      "path": "docs/security-review-2026-10-11.txt",
+      "sha256": "4735f87040707e1c46c2cf238ec7d9b31285c66c848f9a8db804d7ecc0a7dbba"
+    },
+    {
+      "path": "drizzle/0000_curious_zarda.sql",
+      "sha256": "228ed08d9311e62ee06ec2b4c768a07c5a83df2afb82f1e99815604d0d101a6a"
+    },
+    {
+      "path": "drizzle/0001_blue_dakota_north.sql",
+      "sha256": "551c5cb1a739bad631f26b00fbcf8136cb67963ff67f8323b00cbff37a204cc4"
+    },
+    {
+      "path": "drizzle/0002_breezy_giant_man.sql",
+      "sha256": "839b48a7a04b526240843e47cbcaf4f9b6e1e6e3e967b0baa084b7b1252a1257"
+    },
+    {
+      "path": "drizzle/0003_second_round.sql",
+      "sha256": "0b34fb242d1b3fe8eb745f78c21194fba6565b2af94674bbdc20d2c1ba8360c5"
+    },
+    {
+      "path": "drizzle/0004_member_space.sql",
+      "sha256": "7f99cfb7b14d636b2d85084d6bb5f9bef3d7ecd6891cdfc4214524db6fb3d035"
+    },
+    {
+      "path": "drizzle/0005_bank_demo.sql",
+      "sha256": "178bc6c876ddba8e44da45a237a9fb8302d884436415b989c051ba9462c25003"
+    },
+    {
+      "path": "drizzle/0006_bank_accounts.sql",
+      "sha256": "b2f3ebc72f517030de870a32064ed4eea4070ec9bd925c69b4ce98984ce83e8b"
+    },
+    {
+      "path": "drizzle/0007_bank_due.sql",
+      "sha256": "3d65670d357f7ccb9ca39577fb40883a3d4ed0dfcf95e77ddad37a5b805d726a"
+    },
+    {
+      "path": "drizzle/0010_bank_alipay_sandbox.sql",
+      "sha256": "76d9792d0d3a38f62a257e43ed5b3776c062aefb923bc82d669c19da36b6f8cf"
+    },
+    {
+      "path": "drizzle/0011_bank_commerce_sandbox.sql",
+      "sha256": "e7a1f1d26abebe7362a8033c2b13950d077c12d148a987c5b3e4fe155eb2bbb8"
+    },
+    {
+      "path": "drizzle/0012_bank_duffel_test.sql",
+      "sha256": "82de0d78ef4cb816babb7ed4a2fe9639fec30a4959a979bf697012b2cda84474"
+    },
+    {
+      "path": "drizzle/0013_flight_travelers.sql",
+      "sha256": "22b8731a7c9737c40a07e4a179496f08f75db6e2fc218ae73935dfddbddc2a9c"
+    },
+    {
+      "path": "drizzle/0014_real_flights.sql",
+      "sha256": "85080ca994946bacd707bdb504d8463863d81edca3c3736253ac876aac32c03b"
+    },
+    {
+      "path": "drizzle/0015_bank_ai_budget.sql",
+      "sha256": "5fdd5d4a9fc9534a060c3675bae22f2e11434dd2895a81c036e7c549937bf3dc"
+    },
+    {
+      "path": "drizzle/0016_bank_glm_queue.sql",
+      "sha256": "2683ec006885c32a3a313de6c9336c4689e5099a45da07fa8332f6cca04dca3a"
+    },
+    {
+      "path": "drizzle/0017_bank_glm_paid_budget.sql",
+      "sha256": "89f7309db397f6dcdc599b33d56fca6c288b9eb3d1beec4c001a1da698f9807d"
+    },
+    {
+      "path": "drizzle/0018_bank_glm_token_budget.sql",
+      "sha256": "6336f233eaa0492d3ede3c6d4e835864e464f5143c6d2959418d59ab98a35480"
+    },
+    {
+      "path": "drizzle/meta/0000_snapshot.json",
+      "sha256": "571bdf29245ee3e9f6b6987aa4853766baeab2d8ce2c6feeeae31909411f9667"
+    },
+    {
+      "path": "drizzle/meta/0001_snapshot.json",
+      "sha256": "7bc3a0ebdb73753164b122c5e8d6f9b8484b3a94483c87c23bccac6bf7920e79"
+    },
+    {
+      "path": "drizzle/meta/0002_snapshot.json",
+      "sha256": "626b9124a4db2f1b8d15d68b56a6f7bbe43276233a9d74fd36e17e1f29670732"
+    },
+    {
+      "path": "drizzle/meta/_journal.json",
+      "sha256": "ecb691e66ef6b025eb00f4698f6165bc1defc75927ca002bdd65cf9b8d013e76"
+    },
+    {
+      "path": "public/bank/airline57.js",
+      "sha256": "e3c314efbb40354854a9e7b11748f754fcab54d08ccc70c5253ee6f04ac9a567"
+    },
+    {
+      "path": "public/bank/airport-directory44.js",
+      "sha256": "157cd11e0bc1c7e47589ff60507152bc7e74a314b20eb72d77b48ac93ab4b3bc"
+    },
+    {
+      "path": "public/bank/app.js",
+      "sha256": "c867b083d58e3bf57b7a84fe16f4a5f0592b499c447a6e7e094d019560ab205f"
+    },
+    {
+      "path": "public/bank/atelier.css",
+      "sha256": "15febd3cd78df3b26b0deec683bd430a8f1db824b63df317bea145ef5937d6bb"
+    },
+    {
+      "path": "public/bank/baggage54.js",
+      "sha256": "7191eaebb6562b82ec72e16519d7c5bb8cd980666787c54b8b322f199f7594d6"
+    },
+    {
+      "path": "public/bank/bank-local-agent.mjs",
+      "sha256": "2b729a33d3e60e4796f88a8a5b6379a2f08347eaa2f52f73c459647c62c54763"
+    },
+    {
+      "path": "public/bank/boot71.js",
+      "sha256": "5a1eb1c677a68cde83ee8cd7a9a422fcf9685f372a3c516fb269c356b26c7f65"
+    },
+    {
+      "path": "public/bank/business-copy.js",
+      "sha256": "c934f1422478100974280b0ba7f4ef75aa0f76428c536a97346ff2a3513bf2c9"
+    },
+    {
+      "path": "public/bank/business32.css",
+      "sha256": "ee29da388dfdb6a4b45ea0a7d56bed071ebd6330693b7738791d0d5d63d97daa"
+    },
+    {
+      "path": "public/bank/business32.js",
+      "sha256": "798549df4dc5108236f70818d9d686b21d5e6a2dc4905e44683e4df518a20bda"
+    },
+    {
+      "path": "public/bank/campaign.css",
+      "sha256": "12c86f7a0f9234fb1e1e8b9b53c71726d11540fb8116f539faf2da60a8393f64"
+    },
+    {
+      "path": "public/bank/card-contrast.js",
+      "sha256": "29e94b8e1e3fe78f193671c7586cca41343a08f6efeb5e9c161790558c673099"
+    },
+    {
+      "path": "public/bank/closure39.css",
+      "sha256": "493eee1cceac937621c00b929dac48f227ec7149e032eb6962c39295d96b5053"
+    },
+    {
+      "path": "public/bank/closure39.js",
+      "sha256": "94f7d9ff91d008a49cd33b76ccc8675633f4a16f1f4536e1a101a99fe0dc7c1f"
+    },
+    {
+      "path": "public/bank/commerce41.css",
+      "sha256": "86bd03c5d5f361c8e94faa64e19b5bda60dface1b98cbd87159a31038e4c3aee"
+    },
+    {
+      "path": "public/bank/commerce41.js",
+      "sha256": "32264d20c597085573b356a1b60b9f5b033b7fea9603bb4bbf6f53b231e0237c"
+    },
+    {
+      "path": "public/bank/core33.css",
+      "sha256": "c1e69e6b4781af4d955f2d6f0872528330917e70f41e75a34bb45748bb907839"
+    },
+    {
+      "path": "public/bank/duffel45.js",
+      "sha256": "b5d7ab0576e2f5ec902a1ed8920b08a5957db3480e271eb1e23c3aaf1c31bc29"
+    },
+    {
+      "path": "public/bank/experience26.css",
+      "sha256": "6c392d9608e153e03c58c93317f04c2e3ca249112ce90b126db51780490f7d7b"
+    },
+    {
+      "path": "public/bank/experience26.js",
+      "sha256": "362fcdc195b78e2dc8c6c5ac3ecb524afdb932922ea9838f2b5f12a89def8116"
+    },
+    {
+      "path": "public/bank/favicon.svg",
+      "sha256": "7bd20502803a734e0db98ec427346d9f9cd2e7e103e770c3716325fc1b736720"
+    },
+    {
+      "path": "public/bank/finance34.css",
+      "sha256": "b9473ac43ba3721ca98aa7cda635160aaa6b6aeab7cbfabb7e0025f3c84709c6"
+    },
+    {
+      "path": "public/bank/finance34.js",
+      "sha256": "9c0efe7638d9d22b60ed708f6671710608e7e7511f6b4a7b9632897d0e7c6124"
+    },
+    {
+      "path": "public/bank/flight-catalog.js",
+      "sha256": "12570eed10afe5daaf1b2d365c637b333a8c6f16d46f4cef2fcf8c6581833a58"
+    },
+    {
+      "path": "public/bank/flight-info55.js",
+      "sha256": "10898db293b88c4743b66f430b56ce27b05ccf7f66632e6ec5dce6190138db62"
+    },
+    {
+      "path": "public/bank/flight-journey47.js",
+      "sha256": "691b96ce9861c29609a3234d966d19906eb83a56a7dfdf693bdf67e21659855b"
+    },
+    {
+      "path": "public/bank/flight-money49.js",
+      "sha256": "c0b3139bf71a3cadf457d9003b682e94afaeb350392954c565cf9bb6b9e74303"
+    },
+    {
+      "path": "public/bank/flight-route49.js",
+      "sha256": "47cf6d330554e884b8622b0a9c3c735c3ed571e4bc19dda79acc4f5847496d01"
+    },
+    {
+      "path": "public/bank/flight-search44.js",
+      "sha256": "148680ef00108f701338afcb9b12b6be12073a815256ed771ce87584ca8088c6"
+    },
+    {
+      "path": "public/bank/flight-search49.js",
+      "sha256": "e68476949dd5ec80e6d281ba222520c8750b060425925e4dc6577d747b29eac4"
+    },
+    {
+      "path": "public/bank/flight-travelers50.js",
+      "sha256": "31d3f19aa3fddb2ab6a9d063d64c064906a35aed95be308d71f89144f1a26490"
+    },
+    {
+      "path": "public/bank/flights43.css",
+      "sha256": "9943db5929cdf3c85269151005ecec1663c2df5794dc788bbd4d11e669948889"
+    },
+    {
+      "path": "public/bank/flights43.js",
+      "sha256": "95cf8a93ba134afa4fa8d32ae3ac039e705a5b06094d3bf2fd82d403b475d5de"
+    },
+    {
+      "path": "public/bank/index.html",
+      "sha256": "a958423dc97ea6bf12a840a6e22170f501f9e0a53b345f334ff7da19046437cb"
+    },
+    {
+      "path": "public/bank/journeys.css",
+      "sha256": "8185cf84cf6d4851b42e1d4a2a53845700992020538a8ef07087793865f5c5b9"
+    },
+    {
+      "path": "public/bank/journeys66.js",
+      "sha256": "d03d02c5103506011e059f3dd901ac5a4d71cc5f806967ed8bb472e50ba5fca1"
+    },
+    {
+      "path": "public/bank/life35-data.js",
+      "sha256": "df0be4287ce7a2107b339f217cc08cb5c2299c933850d52c764a92efb507f93e"
+    },
+    {
+      "path": "public/bank/life35.css",
+      "sha256": "76fda501c931b3e8088fe2979f7095e174fd6707c9cf89da1fb41e52398d5e66"
+    },
+    {
+      "path": "public/bank/life35.js",
+      "sha256": "84cc83a65fe6a11ddd3f21ecf6220458d9d63bcb1626e57f236ac99ba87b8ab9"
+    },
+    {
+      "path": "public/bank/life36.js",
+      "sha256": "73ac1be6167555ff754b7e8f4730f52ae00d82994e47f70595eeaf8b34d4461a"
+    },
+    {
+      "path": "public/bank/lifestyle.css",
+      "sha256": "a46bc8b346dde212d85e7c68c8aabac866e05e3363c65f765aa0165156bca7c6"
+    },
+    {
+      "path": "public/bank/lifestyle64.js",
+      "sha256": "a9c641af073342e015becb74424508ce3bcf66d921f5e21a91dd62ffd9b931fd"
+    },
+    {
+      "path": "public/bank/market25.css",
+      "sha256": "45280f1ad45ffb44d30b3c02ff5590ede78e60786bf7f248c2f84ace0a92f581"
+    },
+    {
+      "path": "public/bank/material30.css",
+      "sha256": "dcd46c7ddb40ceba73c57cfbaa1d32e6189b6a2ba3a9cabb3493b9343328a901"
+    },
+    {
+      "path": "public/bank/navigation.css",
+      "sha256": "2d9338a8ba074bb588828dbe163360434a77cce28ef8bc05932df87078aac8f2"
+    },
+    {
+      "path": "public/bank/pages42.css",
+      "sha256": "f7030c23567e81f80bdbea0bdf158376c186f2714e07d92e92a31579a3d63335"
+    },
+    {
+      "path": "public/bank/pages42.js",
+      "sha256": "a585cb1ccf33a99033005b56b16d60ab94e701f58b310fff6fecd636a14b61ba"
+    },
+    {
+      "path": "public/bank/palette29.css",
+      "sha256": "e71425646e5f3ae073462bd10bb1fb531797707d7668c1689f500fb10a2ac0a2"
+    },
+    {
+      "path": "public/bank/payment-cards61.js",
+      "sha256": "3f8e2538416c313cd5d39e5d7d1db1e4ad4bcc4c1e8dcc18e7548e3c6185489d"
+    },
+    {
+      "path": "public/bank/payments.css",
+      "sha256": "bcb08efb49afea83e62861caa211e2b129fcf70f79de3cddaac925be94182ef7"
+    },
+    {
+      "path": "public/bank/payments.html",
+      "sha256": "dd5ec8e57a0e2502c7084ebecd76e18b3e9be93d452d6dec85a74ef37e2bffe9"
+    },
+    {
+      "path": "public/bank/payments.js",
+      "sha256": "66690e9a4826ef4a4c8bb568d11e7afbc91c0c44e986ccbb5c07c34db123bccb"
+    },
+    {
+      "path": "public/bank/personal.css",
+      "sha256": "5d6886333fa411f2ed83c6edab624f27433cf65fddf9e7b30730b694e9a8dfac"
+    },
+    {
+      "path": "public/bank/readability.css",
+      "sha256": "eb80e1ce93e22dd0ff536a5e5ef652c303dbb852655dd81659be848033fec9df"
+    },
+    {
+      "path": "public/bank/real-flights52.js",
+      "sha256": "4bf7ac8ee564b79f93dabb859a0f9ba08d408e536d0d1b985d1fce465900c7b8"
+    },
+    {
+      "path": "public/bank/retail.css",
+      "sha256": "dc16cf017621574a3c9a78dd86dd549a9c4073955f4eb104e6e75034de5dec38"
+    },
+    {
+      "path": "public/bank/retail23.css",
+      "sha256": "ef43822d1169e324bbc002ba5cc287fe32e36798a7c124c4c1928a898f403186"
+    },
+    {
+      "path": "public/bank/service37.js",
+      "sha256": "6fca063adf354437ba1cfa0480d63f8aaf388c13b6f0ece3b43be5846425327a"
+    },
+    {
+      "path": "public/bank/services.css",
+      "sha256": "92212a54e3a43a1d0f66da7cfe3a3ad3f05327a134963e192e6bc17cbc4bfae4"
+    },
+    {
+      "path": "public/bank/style.css",
+      "sha256": "6626d985086b32b4da6ba7ba3d3607dca4c8e2f0cf9e619d8cf2a0d69f34ec59"
+    },
+    {
+      "path": "public/bank/type.css",
+      "sha256": "8115706ae919f2e89ac0dc9a2ce62823e0ffaeea7a13b2d2d8b1d4f7163742ab"
+    },
+    {
+      "path": "public/bank/virtual-flight53.js",
+      "sha256": "c0b7ed2646f7192ad8885010a48553f47f0bed35c947f0557f87a4e1cf263bfe"
+    },
+    {
+      "path": "public/bank/assets/airlines/3U.png",
+      "sha256": "b32659c856f5e380669591ea4cf810ea27c8e5a03577d87f4c422e39aa96a1a6"
+    },
+    {
+      "path": "public/bank/assets/airlines/8L.png",
+      "sha256": "3810148aad568b28da77a4064ca97d381fcd3597e1a8f7003270fd839c5fec25"
+    },
+    {
+      "path": "public/bank/assets/airlines/9C.png",
+      "sha256": "fb3d4c79f41d871129c82f7cbcec0fa6bf50493c6c82781d67412ef89c1df461"
+    },
+    {
+      "path": "public/bank/assets/airlines/AA.png",
+      "sha256": "d02a77d514abe9d4ab8b8eef3d101f2ba5ba95606df739dcedf068c3af9f976a"
+    },
+    {
+      "path": "public/bank/assets/airlines/AC.png",
+      "sha256": "233e077dc8b76934dc9449652597bed5208b2c21e642842cfd3ac438f2896adb"
+    },
+    {
+      "path": "public/bank/assets/airlines/AF.png",
+      "sha256": "845aa2956b46f22566ca9cc12d75851f017b509e0397a8e72c4636f4dcffcb1d"
+    },
+    {
+      "path": "public/bank/assets/airlines/AQ.png",
+      "sha256": "cebf3744b8f425b395a79ef0c855cab133a9b6a189877e471af4a5d123be0059"
+    },
+    {
+      "path": "public/bank/assets/airlines/AY.png",
+      "sha256": "b67e6a32d818e6deb28918256d48182db82bd85e67d155bc9406043cdff612cb"
+    },
+    {
+      "path": "public/bank/assets/airlines/BA.png",
+      "sha256": "cff9bad198091ce90506f42822a67142da6928222d7a409b31afe18b0809299b"
+    },
+    {
+      "path": "public/bank/assets/airlines/BK.png",
+      "sha256": "61158d8abaafd49928eb4a9f9e5b7089decbd2e22811a25899fbbe86def55273"
+    },
+    {
+      "path": "public/bank/assets/airlines/BR.png",
+      "sha256": "a1fd1b76c7e132df9b59ce779cce6e59add6f7495bc19f075be33b23e8cf4453"
+    },
+    {
+      "path": "public/bank/assets/airlines/CA.png",
+      "sha256": "163c59f7d02bb3d61e0eca7784f032e6b2af2dc2a7a5b7389eeb51599c28c5fe"
+    },
+    {
+      "path": "public/bank/assets/airlines/CI.png",
+      "sha256": "30a3ebd3a083c27aa03dc27415fd3d9a4da242852b95f4adb921cc33c1ea0bb9"
+    },
+    {
+      "path": "public/bank/assets/airlines/CN.png",
+      "sha256": "5888cf08ec6125123c66184f6b3e24826d4421d76ece716ad2840d986cc80b1c"
+    },
+    {
+      "path": "public/bank/assets/airlines/CX.png",
+      "sha256": "3a980147a347b9e8461b5bddb1276b11a13bb90e6b667cd13917f919309a6cb7"
+    },
+    {
+      "path": "public/bank/assets/airlines/CZ.png",
+      "sha256": "d407da336ded0e205cd843e863a8f54baf98985906aad05a9bcbf8f763159b40"
+    },
+    {
+      "path": "public/bank/assets/airlines/DL.png",
+      "sha256": "188e67d375f39f41c6e937dbe6d21c3a6f2d4f3e7a50854afc8523d3231f1fca"
+    },
+    {
+      "path": "public/bank/assets/airlines/DR.png",
+      "sha256": "a293cf3973c2c8a7601ca4f2cb849ec8ca73a1b36c73167e15c580163dee01db"
+    },
+    {
+      "path": "public/bank/assets/airlines/DZ.png",
+      "sha256": "df531debdf646b5ef249a656cb6293960b2261a191266706e12b4a00b47ca3ec"
+    },
+    {
+      "path": "public/bank/assets/airlines/EK.png",
+      "sha256": "9ea8d85a91e9db34efb52d9978b6280c862ee41e27cc33f9ccbe622f9e36a6ea"
+    },
+    {
+      "path": "public/bank/assets/airlines/EU.png",
+      "sha256": "82213b1573c27c484eca46d57f73f090d2fa238a9e049bc1a4c177560b532d7d"
+    },
+    {
+      "path": "public/bank/assets/airlines/EY.png",
+      "sha256": "64623ac3ea6a6d67651f62ba58289e92402e1dffd2bbdc233a63b7623108d3fe"
+    },
+    {
+      "path": "public/bank/assets/airlines/FM.png",
+      "sha256": "67fc0b757e64b5c6f0b83cbf0318b98f20368de8da8d6ee4efc45f78bf3fab9f"
+    },
+    {
+      "path": "public/bank/assets/airlines/FU.png",
+      "sha256": "c2eab1d10bfbb67701ab9d715a741d293096ca4c978e1b23b2636d7820f3ceef"
+    },
+    {
+      "path": "public/bank/assets/airlines/G5.png",
+      "sha256": "8a7960cf29168c7eb2bcfdf3ddecd7b317e5f2ee1efc340d95afecb607dbc2fc"
+    },
+    {
+      "path": "public/bank/assets/airlines/GJ.png",
+      "sha256": "f395bfd9782202d65ab1c19d726edcda66f845276e624cb05a83ce3ad26a9802"
+    },
+    {
+      "path": "public/bank/assets/airlines/GS.png",
+      "sha256": "fec3e4d98678ba011a61d6c017cd05975c95d7f1df412549bff427c07b5dca58"
+    },
+    {
+      "path": "public/bank/assets/airlines/GT.png",
+      "sha256": "18a2238dd3e9cf8b725626b535c17741c13fa60d56a0e7656432f6f5757a9955"
+    },
+    {
+      "path": "public/bank/assets/airlines/GX.png",
+      "sha256": "d9feefaae920f129e6137e3f228472852f7a743bc3ec86d7fd457a4dc882189d"
+    },
+    {
+      "path": "public/bank/assets/airlines/HO.png",
+      "sha256": "f9fd30afefec724f0ecd17e80feedc1052d8fde9327529bb59d3abfa8c6a9ae9"
+    },
+    {
+      "path": "public/bank/assets/airlines/HU.png",
+      "sha256": "5888cf08ec6125123c66184f6b3e24826d4421d76ece716ad2840d986cc80b1c"
+    },
+    {
+      "path": "public/bank/assets/airlines/HX.png",
+      "sha256": "9a3b485286b87b96a122b64ebafe5df9d48f920975ff045639d1c8c4989b25db"
+    },
+    {
+      "path": "public/bank/assets/airlines/IJ.png",
+      "sha256": "d723b11c6797973a1b9adb5c627b4a54e216ce06afab9558fa2431d0ddca0e27"
+    },
+    {
+      "path": "public/bank/assets/airlines/JD.png",
+      "sha256": "1bb905f0c2b8a0c7ac7ad3971d94f3c2974dded826c4f4bd8ab9feaa430bf036"
+    },
+    {
+      "path": "public/bank/assets/airlines/JL.png",
+      "sha256": "a8da0c0c528e5d638821ca2c978d243abb0bda7121ed0f1ee3b5851f06c23cc8"
+    },
+    {
+      "path": "public/bank/assets/airlines/KE.png",
+      "sha256": "b1c9df19b2ace983384391ebbbea036a42ccfcad6f0ddc64b1b1dff54c457463"
+    },
+    {
+      "path": "public/bank/assets/airlines/KL.png",
+      "sha256": "0e608367276b2a656eb27fcbf79d4310606b51fd25d46c1c585d5b55c20a94f2"
+    },
+    {
+      "path": "public/bank/assets/airlines/KN.png",
+      "sha256": "42b1dac29b92753c0ae9e11aebc47c8e887a9e142ca8dd296f1b0a7dba61284a"
+    },
+    {
+      "path": "public/bank/assets/airlines/KY.png",
+      "sha256": "7631200251fde2978a3e6d9f36c28cd541b4d779f7ce38cf4b47957e2a7c6ac1"
+    },
+    {
+      "path": "public/bank/assets/airlines/LH.png",
+      "sha256": "89f0f25f9b74e9739ae8459a65d491cddd843a483510cd14b2bff5aaf9e4521a"
+    },
+    {
+      "path": "public/bank/assets/airlines/LX.png",
+      "sha256": "4b6f390de8acc067ff2600fa61988d5346593fa9c4aa41bf34cfaa55d665f07d"
+    },
+    {
+      "path": "public/bank/assets/airlines/MF.png",
+      "sha256": "0b46367f899d904b9320e5b635e0227eb8435573ce6a69383cf7961c0a096d7f"
+    },
+    {
+      "path": "public/bank/assets/airlines/MU.png",
+      "sha256": "711259f0b155f72d97c7ce4c0bae0cf99819060ea24decc1d5561b4729bac941"
+    },
+    {
+      "path": "public/bank/assets/airlines/NH.png",
+      "sha256": "5f5e7d2f6f9160b6fcb90b3000d9cef1cf5167680f111545e207ec024742ac9b"
+    },
+    {
+      "path": "public/bank/assets/airlines/NS.png",
+      "sha256": "e0d59365af653c7f2a3a553300b3bc05d502283ed7ef4b0d2e2a423a90d2399e"
+    },
+    {
+      "path": "public/bank/assets/airlines/NX.png",
+      "sha256": "57cda6cd263d0c1d0c05f097e7bd836d65d2021674ef4aa18779cb40635165ed"
+    },
+    {
+      "path": "public/bank/assets/airlines/OS.png",
+      "sha256": "300afabb8410a796d018b5419a9b23bbaf43849f58c47415f58874da2c42cefd"
+    },
+    {
+      "path": "public/bank/assets/airlines/OZ.png",
+      "sha256": "8b1d4f3803d1e6f6a24d4a6b2c096a9607c37f396a9277af3eaf2b3d48c47fa7"
+    },
+    {
+      "path": "public/bank/assets/airlines/PN.png",
+      "sha256": "3f17710185b56c8e6f6f84658bcdf5a7baa8356e2514c3635121f302997916a5"
+    },
+    {
+      "path": "public/bank/assets/airlines/QF.png",
+      "sha256": "f2e06baad51dbaeecca88b1db6229a2346bd742b162170e82a52423417a7a990"
+    },
+    {
+      "path": "public/bank/assets/airlines/QR.png",
+      "sha256": "ba643ef8a55c3dc83af0012b7276780e4b565702cd27ec8f8f186acb488e4483"
+    },
+    {
+      "path": "public/bank/assets/airlines/QW.png",
+      "sha256": "30c9d7b497f7c7bc3b8ec444a7f3782b63004f641783507aaae3b27a9318d552"
+    },
+    {
+      "path": "public/bank/assets/airlines/RY.png",
+      "sha256": "c834218778465d11352e9bd5880d0558b306df5ff68c92e8a6a30878defa0ef0"
+    },
+    {
+      "path": "public/bank/assets/airlines/SC.png",
+      "sha256": "a12a5bd257129aa91099580b378ce93d6aac197f24726dbf80243a43d227fc1f"
+    },
+    {
+      "path": "public/bank/assets/airlines/sources.json",
+      "sha256": "acd69b3742de9aa11168b1097f695c62f1437285d41396aea541661138903f17"
+    },
+    {
+      "path": "public/bank/assets/airlines/SQ.png",
+      "sha256": "de188b1b9232e6010bbac4cfb824a626a18e250270104afaaebbbd7023a51971"
+    },
+    {
+      "path": "public/bank/assets/airlines/TK.png",
+      "sha256": "0b37ed2bb5541d8e7afbb847bbce83ba1839fc2a7c43b59d5f7cdb0fab9bb769"
+    },
+    {
+      "path": "public/bank/assets/airlines/TV.png",
+      "sha256": "645a16f5fdd609bdeefef4505759aeef030a7136c804e9976c7dad7426cce514"
+    },
+    {
+      "path": "public/bank/assets/airlines/UA.png",
+      "sha256": "2d097470ec47a3f7fc89ddbe0e6b9c908768fac2a8c3ff164f7ea006133afd20"
+    },
+    {
+      "path": "public/bank/assets/airlines/UO.png",
+      "sha256": "dbbdff8fa9351310820e3d6435734af5f85b99460053520a84ebdb79f2e64d61"
+    },
+    {
+      "path": "public/bank/assets/airlines/UQ.png",
+      "sha256": "a43842d5f80c4bab9457ae980cd6c723f479c22c84906b65cd3f289a48140045"
+    },
+    {
+      "path": "public/bank/assets/airlines/Y8.png",
+      "sha256": "d64761983fd82c5e1b1d0839a0cf5d7023d713986f40a0d2ed6fcb8546f9a403"
+    },
+    {
+      "path": "public/bank/assets/airlines/ZH.png",
+      "sha256": "cef432131f1f5cb063c894fa0a205095b4ca159d5de62eb68d6a5cf67116d7b2"
+    },
+    {
+      "path": "public/bank/assets/campaign22/home.webp",
+      "sha256": "17b7715aa37eedea42cf55ff276c2621ca94a4e424e6209154e443a57186cd51"
+    },
+    {
+      "path": "public/bank/assets/campaign22/life.webp",
+      "sha256": "44c61dd08a484d263cd5dd26fde5660ead34c5fa79a95cad3814bcb867c26f4e"
+    },
+    {
+      "path": "public/bank/assets/campaign22/wealth.webp",
+      "sha256": "d490de136139980f29a97b9a7881fcf6552c2b5cab4c41d3a3e3b6f58a516ec9"
+    },
+    {
+      "path": "public/bank/fonts/Manrope-OFL.txt",
+      "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b"
+    },
+    {
+      "path": "public/bank/fonts/manrope-variable.ttf",
+      "sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6"
+    },
+    {
+      "path": "public/bank/fonts/noto-sans-sc-ui-0.woff2",
+      "sha256": "7966b00a2956b9bc316df3fd4e3274abe070d935d9dc26e58b887cd63c4cd42c"
+    },
+    {
+      "path": "public/bank/fonts/noto-sans-sc-ui-1.woff2",
+      "sha256": "40f4bf42a3e927ba5231096a5a768ca74e995b92ac12234394f446f397375a8a"
+    },
+    {
+      "path": "public/bank/fonts/noto-sans-sc-ui-2.woff2",
+      "sha256": "8b00b8a70cc66a3222b512c3c4fe6941e7ea53d5a1495848974094373d4d2512"
+    },
+    {
+      "path": "public/bank/fonts/OFL.txt",
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    },
+    {
+      "path": "scripts/bank-core33-qa.mjs",
+      "sha256": "943e6ec3abdffc5101518e54208f503dc7d25ed3a1338a6f5a86bfe7e3b55d6f"
+    },
+    {
+      "path": "scripts/bank-finance34-qa.mjs",
+      "sha256": "79f7c9ba6a0cecf01ff38fd3b4ffc0593ae331719ae392668b9524fd3cba2207"
+    },
+    {
+      "path": "scripts/bank-life35-qa.mjs",
+      "sha256": "03e1b36b20f5d8588547ad149165195846abed04689251dbe3f638ff7ffa963b"
+    },
+    {
+      "path": "scripts/bank-life36-qa.mjs",
+      "sha256": "c793bdb902578917617da00142b86718ab9ae13dc906f0c8674a113a68170c40"
+    },
+    {
+      "path": "scripts/bank-local-agent.mjs",
+      "sha256": "2b729a33d3e60e4796f88a8a5b6379a2f08347eaa2f52f73c459647c62c54763"
+    },
+    {
+      "path": "scripts/bank-qa-server.mjs",
+      "sha256": "b7514be9738efa53a6fd203e71da351c29aa312a214fbf25fc20ed499129d650"
+    },
+    {
+      "path": "scripts/bank-qa39-server.mjs",
+      "sha256": "35e1538a26c8d1229ceda91b62b8118c115f007fd41ff4a0547742f4337a0ab0"
+    },
+    {
+      "path": "scripts/bank-qa40-server.mjs",
+      "sha256": "7b553b150e2e925b5bc143096303c6d4346795beda0657c532cf67aafd7cd4a1"
+    },
+    {
+      "path": "scripts/bank-qa41-server.mjs",
+      "sha256": "5c4f40c6c53a9420d6b280cf44174adcc582aa7343d439cdc98c0d205cda4c6b"
+    },
+    {
+      "path": "scripts/bank-qa43-server.mjs",
+      "sha256": "9961d3360637e15c47a744285f3b453db8774ab378a4c67305151e6070c537d4"
+    },
+    {
+      "path": "scripts/bank-qa45-server.mjs",
+      "sha256": "288ca2967bc3a99134e0cfcf787ee3fbc58e8ad7c9ee4520e89fc0b1079719d3"
+    },
+    {
+      "path": "scripts/bank-qa47-server.mjs",
+      "sha256": "a9965db8e4fae678d0555440af20f029b6857510819be2cc24ed334f06792bfd"
+    },
+    {
+      "path": "scripts/bank-qa49-server.mjs",
+      "sha256": "9dbacab9210c22e5c2069a69e7e522e2c2c964ac1461d2cf763c31702ed8195a"
+    },
+    {
+      "path": "scripts/bank-qa50-server.mjs",
+      "sha256": "272d0bb23785b2165485a9a0329e5c323074d26ba912d6aee19409969250bfea"
+    },
+    {
+      "path": "scripts/bank-qa51-server.mjs",
+      "sha256": "834eaeb8ba854d7ed93ab2dfc66e86b8b8b18f0dd06ce831782326032a78f087"
+    },
+    {
+      "path": "scripts/bank-qa52-server.mjs",
+      "sha256": "9ded272f6b60a08e3fb554838404b109b49a2a2d8ffbb2640b952a341d9344d9"
+    },
+    {
+      "path": "scripts/bank-qa53-server.mjs",
+      "sha256": "f6e985abd16ad261352a214063b59ede0fe01c747aab8d0cc0f93b07d2c25e0b"
+    },
+    {
+      "path": "scripts/bank-qa54-server.mjs",
+      "sha256": "cdcdca1fcd59a58ec80c131c3f37e972820905fa163055a78696750aad80c9f8"
+    },
+    {
+      "path": "scripts/bank-qa55-server.mjs",
+      "sha256": "1c36a1a85f6c8fee5cfa5ef06e6dc938b9fa1df97fa8c2562e275c0f01024347"
+    },
+    {
+      "path": "scripts/bank-qa56-server.mjs",
+      "sha256": "fc3f46b14271b1cdc9148a06a9212b72611064fbc882478b40452a6d1217e3b9"
+    },
+    {
+      "path": "scripts/bank-qa60-server.mjs",
+      "sha256": "dbda019d8c2dd1e7b91730d06d94a111666772f1288f7f2b94d9b28d161e6ad0"
+    },
+    {
+      "path": "scripts/bank-qa61-server.mjs",
+      "sha256": "d0919b08899d0b98e14ad4fc3107ac88b5e17f701c6f4af2d95866807d0d726e"
+    },
+    {
+      "path": "scripts/bank-service37-qa.mjs",
+      "sha256": "a064b2c04aedffa18fe9e7b81008d647d658064a1d46fb743a4ea9a48d4531c3"
+    },
+    {
+      "path": "scripts/bank-service38-qa.mjs",
+      "sha256": "4d649f65384fadfdefba3b0d5184b71b958da1a3e35664637a75f018ae1932a7"
+    },
+    {
+      "path": "scripts/bank12-api.py",
+      "sha256": "726aeeb84522ea7a24233b987aa4d65b6e69bf2c5b25914260574d4830910f4b"
+    },
+    {
+      "path": "scripts/bank12-finish.py",
+      "sha256": "2ed7bd24f89fba8653a3f756d1d0b784dd337ba4989c018fc78a3870f50ebdc8"
+    },
+    {
+      "path": "scripts/bank12-helpers.py",
+      "sha256": "8bae6168d5b6fe78f3b1e40a9d4237389a034187df9e2938ebce45586c6b7ae6"
+    },
+    {
+      "path": "scripts/bank12-polish.py",
+      "sha256": "ff8af7e0d3d26027f51c56ced1f9e6d37523ecb68ac7432bdd9feddb912025b7"
+    },
+    {
+      "path": "scripts/bank12-ui.py",
+      "sha256": "26aa6884ad901d6a0605fccc04db70692afe30e58552c5ccc5de76c2e063ba72"
+    },
+    {
+      "path": "scripts/bank13-auth.py",
+      "sha256": "130464ddafeffa392171ea1d8d9101a554c2918756c08b17dbb6e26e21c3d8b1"
+    },
+    {
+      "path": "scripts/bank13-lockout.py",
+      "sha256": "3d8bf6a4b7bebfa223792ab0c34d4cd7cfdd7b17330d71ab8baa0758cb11418b"
+    },
+    {
+      "path": "scripts/bank13-tests.py",
+      "sha256": "3a036117c466bd1a02a3c7bc35cde985b5282cfd575b00402a10cd2299862f52"
+    },
+    {
+      "path": "scripts/bank13-ui.py",
+      "sha256": "d4613d041b9142e0ea30f9dfaa80ae96152aeaf7f2bf189793edafc45619958c"
+    },
+    {
+      "path": "scripts/bank14-demo.py",
+      "sha256": "e9e81007e3311eeceff0d99b291434f07428f33ce433db6a3922a9a894ec0f1f"
+    },
+    {
+      "path": "scripts/bank14-engine.py",
+      "sha256": "1fc851471c8bbc703744aa57b627239c2f087c208db3e46a0a0c8de424851e94"
+    },
+    {
+      "path": "scripts/bank14-local-fixture.py",
+      "sha256": "2338b65bfd5ba25832c2a8b434256e00a83cc4931faccddb932f9572c3459bde"
+    },
+    {
+      "path": "scripts/bank14-planpay.py",
+      "sha256": "2b9bafa99c6374fea531ba34be3b7032b2fda87df8cf61fc047cfa956fa52df1"
+    },
+    {
+      "path": "scripts/bank14-start.py",
+      "sha256": "7549d65f2d4fc3c3dce9581f304e5d7e966f5d9fa9c7d67a8d18c71f44ccf69f"
+    },
+    {
+      "path": "scripts/bank14-ui.py",
+      "sha256": "c4ea035bdea664ec7fa81b9c44ad6361ad1b3135abbde5c35eb52fb095ba1a5e"
+    },
+    {
+      "path": "scripts/bank14-views.py",
+      "sha256": "96a89d702c187af749f06804d75286bef308ea432ec60c90df863dff8a3d5813"
+    },
+    {
+      "path": "scripts/bank15-pin.py",
+      "sha256": "dd5a5263ad85b89a1e4a8e64f0492fa241efee69806c3c86f638a2ccc6f9b482"
+    },
+    {
+      "path": "scripts/bank15-tests.py",
+      "sha256": "93763bd9b541b6bc9bdc36e8f011ef018c9669eca198e390ea2c4f49567d7042"
+    },
+    {
+      "path": "scripts/bank17-browser-qa.mjs",
+      "sha256": "e1c6e11e93f0d044e38249adae30274a63e9da6e871950be25db7a2805261df0"
+    },
+    {
+      "path": "scripts/bank17-mfa-browser.mjs",
+      "sha256": "14cad93154f6c8d93b7938f58b885e37501323f649795faca0c2c403c0c3a677"
+    },
+    {
+      "path": "scripts/bank17-six-browser.mjs",
+      "sha256": "36f00c3c760ba65c6d48012f9a26ceb1fb227ddc806735345842c4297c11f708"
+    },
+    {
+      "path": "scripts/build-verified.sh",
+      "sha256": "2ae5329ac860076070c9217a43106a15cb5ecf907a0f7baeb9ef903f76b53c68"
+    },
+    {
+      "path": "scripts/bundle-bank72.mjs",
+      "sha256": "7da80fb0a0b55ae06f18e6178fa38d6e25dcc990d120985f483c38466bad316a"
+    },
+    {
+      "path": "scripts/campaign22.mjs",
+      "sha256": "d573edd1bacd3a35247c143fbfdddb9b12dab19962916058be4c8503781b5127"
+    },
+    {
+      "path": "scripts/check-alipay-sandbox.mjs",
+      "sha256": "23924b56b68f34608133cc2a10e8476290e724f1f5a4656bfc5cb5efcf9a7677"
+    },
+    {
+      "path": "scripts/configure-duffel45.mjs",
+      "sha256": "ecbe65b9f540a149362f3c540e1e451ddaa73ee341a332739235822cb47b6303"
+    },
+    {
+      "path": "scripts/configure-variflight52.mjs",
+      "sha256": "f4a0b90361473e5649b0fca401cd77214f5628fcd0638828f135a476514bf558"
+    },
+    {
+      "path": "scripts/deploy-alipay40-secrets.mjs",
+      "sha256": "1a2f7c558e311d350163150657c9ab85cf299bbe4bf5a65a4a591821aedfb84e"
+    },
+    {
+      "path": "scripts/diagnose-alipay40.mjs",
+      "sha256": "0a615331ada812c4af4d8fbd06d8b7c9c73b643fec995e8a1ee6ea5d64fcad0b"
+    },
+    {
+      "path": "scripts/execution-profile.mjs",
+      "sha256": "2e71116f4d2b70cff8bb70436f8dd5c709ec7ff62893424530f404e0193d3630"
+    },
+    {
+      "path": "scripts/glm-free-test-client.mjs",
+      "sha256": "eec75e041db91c0ad8232cff40bbf7990e2911f17583b95d0c7056e2a8486b31"
+    },
+    {
+      "path": "scripts/install-ci.mjs",
+      "sha256": "63f2c4589b740184b68a0c9214fe92439b6f7d1fbfbec9ef552fd745b0a9c6cc"
+    },
+    {
+      "path": "scripts/install-ci.sh",
+      "sha256": "5161648b51012c7351a4a975c6ed05a67cc1f1d9dbabc4381708d1005d8c4edb"
+    },
+    {
+      "path": "scripts/install-pnpm.sh",
+      "sha256": "db980d931c7d1fb6d64dfede2fc698227d9bbd3bbb94f50a8966d9eb980bf10c"
+    },
+    {
+      "path": "scripts/market25-view.txt",
+      "sha256": "7432903dc4d794162f7968cb7d39b225d96d9b81b990b1779e634e472a7607b0"
+    },
+    {
+      "path": "scripts/pnpm-install.mjs",
+      "sha256": "380309d06af721775377f805e90bbba27118e91bf67cd6c87ca59b9ef56453e8"
+    },
+    {
+      "path": "scripts/prepare-security.mjs",
+      "sha256": "65eb40c27cd560a8808fc1e5a9ffef2afa7bc706b847ef60c663a2f26d536a5b"
+    },
+    {
+      "path": "scripts/probe-free-alternatives69.mjs",
+      "sha256": "10ae13019e57ad7c2679081d7699e751c9d34c88ef50322d4b3a6c05aa28d4ad"
+    },
+    {
+      "path": "scripts/probe-glm-free.mjs",
+      "sha256": "57223e543dde02d4cee97c1f29060184e21a1994862ae8d0404e729d78b966b7"
+    },
+    {
+      "path": "scripts/probe-glm-platform68.mjs",
+      "sha256": "298e4a4c73184c9d58376730916d5aa841cc919ae517179676eb6916e2ffb026"
+    },
+    {
+      "path": "scripts/retail23-views.txt",
+      "sha256": "0b27155f66f1ad4b472855c2b51b41626a474a149df50cb5dd9eceba1f96f160"
+    },
+    {
+      "path": "scripts/retail23.mjs",
+      "sha256": "1907820abdc64cbd31ada95d6574ae217f4f7cf8e46e888bc6d812b87f20e470"
+    },
+    {
+      "path": "scripts/run-framework.mjs",
+      "sha256": "9bf9f41a29314cabe0238b8e9c540ec3f7b5a6adafc7c8fb6c3940722d061dca"
+    },
+    {
+      "path": "scripts/security-guard.mjs",
+      "sha256": "ab52b43c6a536bbd7f1c69ba2b3359d81044473265fde39a424b805619e013cc"
+    },
+    {
+      "path": "scripts/sites-env.mjs",
+      "sha256": "5de99d6806b01f0ee0b941af3684d75dcf1afbbcff22cb95bfa2e584c5dafa88"
+    },
+    {
+      "path": "scripts/sites-env.sh",
+      "sha256": "df86ebfc27d2f00860036658e933ac0ddd7b5f6879aa5d51218f0863c7e1fb60"
+    },
+    {
+      "path": "scripts/test-bank-live.mjs",
+      "sha256": "5cad3aa039733c50b6cd73af154e61e1fa15ebcf4192a301091bb8be526dd7d1"
+    },
+    {
+      "path": "scripts/test-security.mjs",
+      "sha256": "66a98705a3993165b842fcfee2004a734b0524f9f376c3d33f4ab4dd6aedb9c5"
+    },
+    {
+      "path": "scripts/upgrade-bank12.py",
+      "sha256": "14d938e0851ad75a5e15044ad5447542ef512806f33cea2425d7aaa1200d331d"
+    },
+    {
+      "path": "scripts/verify-alipay40-online.mjs",
+      "sha256": "ff47ba4dde35ca59fd49bf90bd462e39045d9bc2f22bf35a3add0aa8ed2edcfb"
+    },
+    {
+      "path": "scripts/verify-alipay40-paid.mjs",
+      "sha256": "f44a53b6b4c1961ac19b0dc347b17cfa7ee65d666a89e606ef72639ceed8a9da"
+    },
+    {
+      "path": "scripts/verify-alipay40-unpaid.mjs",
+      "sha256": "f5b47e2200f26bac8f29161ffc47ad45d99dedbb237248b3256686004a61d319"
+    },
+    {
+      "path": "scripts/verify-bank-closure39.mjs",
+      "sha256": "3548220142175b4674875b5baa2693b417e9f1595f6791c46bd81b42432b1cd2"
+    },
+    {
+      "path": "scripts/verify-bank-online70.mjs",
+      "sha256": "e601842041db9ebc78387d8603e567947af26ebe54e835be72ed28b7e71e2f7d"
+    },
+    {
+      "path": "scripts/verify-booking51.mjs",
+      "sha256": "60e79286efefeaf28ecdeaed41d8fec90dc33997c9de32b071f17c9c053dd2eb"
+    },
+    {
+      "path": "scripts/verify-commerce41-paid.mjs",
+      "sha256": "0d24567976e345a3fdca2c054e650ceee0a1e1aef0ce04c6208c669ada5f90eb"
+    },
+    {
+      "path": "scripts/verify-duffel45-api.mjs",
+      "sha256": "d45fffc059b6f75bde1baaeec0efd8bae74d50be58391e7098a5bb58eed9411e"
+    },
+    {
+      "path": "scripts/verify-duffel45-cycle.mjs",
+      "sha256": "cfa8d35c1ee0abb9ef4374996dea393ef109dca7567de79d0a51256a4da09a90"
+    },
+    {
+      "path": "scripts/verify-duffel45.mjs",
+      "sha256": "43248258ca6cb033af62d8787c78561be2e17c979539512e879e5f01dc03e3b1"
+    },
+    {
+      "path": "scripts/verify-duffel49-api.mjs",
+      "sha256": "17e409f64196cc914fba79b48964445296c9da978120add29ee0b006f7b1bb6b"
+    },
+    {
+      "path": "scripts/verify-flight-online70.mjs",
+      "sha256": "2dd2821c3fe1869ca16d1419a987afda4ef35e13a928a94aa22abee839c240b3"
+    },
+    {
+      "path": "scripts/verify-flights43.mjs",
+      "sha256": "45adf54641665a9880641067d8e8118b45da0917918f1b6b9062c928887c1a9f"
+    },
+    {
+      "path": "scripts/verify-pages42-online.mjs",
+      "sha256": "4bd41173cf0f3472e5eb2dbbfad451d271ca266206fd70b2ccc81d112f087dc2"
+    },
+    {
+      "path": "scripts/verify-passengers50.mjs",
+      "sha256": "daac9b2aa60a9ef6a507ad3cbcf56f55ded998dc46394616ae355ce54c797bd3"
+    },
+    {
+      "path": "scripts/verify-real52-online.mjs",
+      "sha256": "e68018cdeb6e192dfa4b8ba6c6bbd553eff18035211aff1885552bd3a7fd3471"
+    },
+    {
+      "path": "tests/baggage54.test.mjs",
+      "sha256": "effad20be233d261ec9697286964d491baa20981edf7ad62ca419e79a9f07f81"
+    },
+    {
+      "path": "tests/bank-accounts.test.mjs",
+      "sha256": "ba251e31ddb6a7248662ae6129611d58914ae1b25c7d9020687bc9ac658062ce"
+    },
+    {
+      "path": "tests/bank-ai63.test.mjs",
+      "sha256": "f46d78729337ba4eb6d2aae166e747469593bfbc6d51369223607323d2ca7d8e"
+    },
+    {
+      "path": "tests/bank-alipay.test.mjs",
+      "sha256": "991d5e1ec611ce7920b4c645d331618045a973d82dd1d21949842f80cfff5c8d"
+    },
+    {
+      "path": "tests/bank-business32.test.mjs",
+      "sha256": "71029ecc0e23aded6281053297ea4a1b38f67335e971a2b5da7099cb217eb74d"
+    },
+    {
+      "path": "tests/bank-cash-accounts.test.mjs",
+      "sha256": "695c9301683eb403a3d89eb1f7f2981bf2926acfa40c3ef88322fbe1ee51f429"
+    },
+    {
+      "path": "tests/bank-closure39.test.mjs",
+      "sha256": "b88ebf5d9de5cf5463fc6a7af6720f962b508f5e2307902748a8fd74bbd7676f"
+    },
+    {
+      "path": "tests/bank-cloud-ai62.test.mjs",
+      "sha256": "d5e6eef64f2735465352c573cc353e76979b32f34a1041baeb4c5c73b9ff3585"
+    },
+    {
+      "path": "tests/bank-commerce.test.mjs",
+      "sha256": "5948e7e266b4206c59c1020832b72ef09cad3ddcc5125ca60ec17514eeb23861"
+    },
+    {
+      "path": "tests/bank-copy28.test.mjs",
+      "sha256": "deae9c0616a461377a3f50a06eda0069ad06af2954dca2131b934186259e3e1a"
+    },
+    {
+      "path": "tests/bank-core33.test.mjs",
+      "sha256": "e3cdcb3629105eb4eaa57ccef43b92f290b49f411e87ea816ae244b67ba2a4ee"
+    },
+    {
+      "path": "tests/bank-credit.test.mjs",
+      "sha256": "0841b5490aef8f4c33c107ef6d37a716ee6c91939236615424735a9dccb872b5"
+    },
+    {
+      "path": "tests/bank-finance34.test.mjs",
+      "sha256": "c154696ad3b2786981285d47c608d6278e0145c128f7552d0d3a22cdaf1a694e"
+    },
+    {
+      "path": "tests/bank-flight43.test.mjs",
+      "sha256": "1533f3da2f4fa622bfa235dbc495642d9df2684942cf17e300ba0266f8a3b40a"
+    },
+    {
+      "path": "tests/bank-glm68.test.mjs",
+      "sha256": "bdf5562eb70ec9f3c10c8a2fceafced159390d525105c874bdd5ab34cd966a25"
+    },
+    {
+      "path": "tests/bank-gold23.test.mjs",
+      "sha256": "01a156a98962ca56db89ba1aec03f22b1b9f571666ebf6c75fbc67ae505dacf9"
+    },
+    {
+      "path": "tests/bank-history25.test.mjs",
+      "sha256": "252ca0924eb67d560e2ddae34c86d616f8c894eee5860d2dc72bd1a33011d836"
+    },
+    {
+      "path": "tests/bank-journeys66.test.mjs",
+      "sha256": "2eb55af4106de76372c9f238af7b5786b5e31e9a3a76a6b50fd487805e5049df"
+    },
+    {
+      "path": "tests/bank-life35.test.mjs",
+      "sha256": "03baf941fbed1b5a435c83f4ce8d673ffe2f51261ed4080819e014a011e71b1a"
+    },
+    {
+      "path": "tests/bank-life36.test.mjs",
+      "sha256": "1d18a88e22770624fcbabcf2b0b0f6be47b60123536f7ddcd285e44d258aebb2"
+    },
+    {
+      "path": "tests/bank-lifestyle64.test.mjs",
+      "sha256": "f77919f92580956fff1c2cb2e7b21eb01ef071bf873e14afb9601226638ed448"
+    },
+    {
+      "path": "tests/bank-market.test.mjs",
+      "sha256": "2ae51d37768b55450cd37664349848d9fc0b293341dae1b2f3e8a36cc024cf9e"
+    },
+    {
+      "path": "tests/bank-pages42.test.mjs",
+      "sha256": "8731e9399ddc3a8560d6ee65b894c4453c23ab56ce28f88aacc6c6bdcbf8cfa5"
+    },
+    {
+      "path": "tests/bank-scenarios.test.mjs",
+      "sha256": "174cd030a1aee85279151c3c2be01af7df8cb9ce512691cb417ad9cf122f029e"
+    },
+    {
+      "path": "tests/bank-service37.test.mjs",
+      "sha256": "4195160f973a873ad459d106a4ad8eef3ffeac983618c2cde7b08f25f662f0bd"
+    },
+    {
+      "path": "tests/bank.test.mjs",
+      "sha256": "86af6b0650258c2e6e9ac26181ea982bdeaabaf253ae99ed99cfda1836fe804d"
+    },
+    {
+      "path": "tests/duffel-test-client.test.mjs",
+      "sha256": "f948b95409e64824bbeef36b7005cbdbe002acd1a7410775bff8766cdf6898ed"
+    },
+    {
+      "path": "tests/exchange55.test.mjs",
+      "sha256": "c1ee68ac073031d8f6a342eaf0d5b8ce2c785da5e7dc0325d76bb880a57dd32b"
+    },
+    {
+      "path": "tests/flight-journey47.test.mjs",
+      "sha256": "7f6a5e980c9b57a6c5102834fc880e7521f086c43b8f820b4c6b655c3e71130f"
+    },
+    {
+      "path": "tests/flight-payment59.test.mjs",
+      "sha256": "c9a0f0aa8248b3449ca2674a5f174ada0ff5fccf004d350ebba41f003ae1ee36"
+    },
+    {
+      "path": "tests/flight-search44.test.mjs",
+      "sha256": "1e0d4b965ee915a376813ee4506065ac08eb7564c55a9af44c4d31888606e96f"
+    },
+    {
+      "path": "tests/flight46.test.mjs",
+      "sha256": "a4f99779573f8b77221d3eddd060164af41f9110525bb9b113760a97c57c0f54"
+    },
+    {
+      "path": "tests/flight49.test.mjs",
+      "sha256": "603c13b746bbd424961430f393ce08b7438c168aa39cda8cabeb3acba92476cb"
+    },
+    {
+      "path": "tests/glm-free-test-client.test.mjs",
+      "sha256": "13a84b334e104eec6367adb15b094205212bd59b6a170d319d05af563ed2f0b0"
+    },
+    {
+      "path": "tests/life-payment61.test.mjs",
+      "sha256": "a07eb7e48efd44855ab7ab5e29da20e1318ec792814ea509292d3570859316b4"
+    },
+    {
+      "path": "tests/passengers50.test.mjs",
+      "sha256": "861dffa54f631b0bcf516df38332731fc25bed622e5a17beccf9f0344fc6f1ce"
+    },
+    {
+      "path": "tests/real52.test.mjs",
+      "sha256": "d305a62f65e77d2850a5ca2e8ae2d43f7698fe95576aed12d8617f0ebb0b693b"
+    },
+    {
+      "path": "tests/virtual53.test.mjs",
+      "sha256": "9c444767bff120c4f7f71a94f02bcf39d1ad7c0ff75ba20151c1df49af0ef919"
+    },
+    {
+      "path": "tests/fixtures/real52/baggage54-CZ303.json",
+      "sha256": "aa0821c6e09e1b562e10991a6c4e0082e15b5d89af192e95472cbe01f5ff1f4d"
+    },
+    {
+      "path": "tests/fixtures/real52/baggage54-CZ3568.json",
+      "sha256": "b7e3c41869ddd1d25c62b61ba79de1544df17dd63f3437fa4babaf4e3f5f6394"
+    },
+    {
+      "path": "tests/fixtures/real52/vf52-can-lhr-flights.json",
+      "sha256": "7c26ed11f7557e06ff9f6cb7a50536e3f887a2067ebfc2b9f2452edd6ca8ab2c"
+    },
+    {
+      "path": "tests/fixtures/real52/vf52-can-lon-prices.json",
+      "sha256": "c7cb216496a4ab37a5f53e1c1d09118d23535c412370449ab6556a92567cb6e7"
+    },
+    {
+      "path": "tests/fixtures/real52/vf52-szx-sha-flights.json",
+      "sha256": "0b7f79cca28b8d4ce5da71ce2736d1abcfe7a1af13b33c850b2e62bdb18518d0"
+    },
+    {
+      "path": "tests/fixtures/real52/vf52-szx-sha-prices.json",
+      "sha256": "4ace46fc395c001bdae5b32a45935b75071e67697bb1ff3f4826bfda4574812b"
+    },
+    {
+      "path": "worker/baggage54.mjs",
+      "sha256": "f1cddb9a4660410e10d8aef18f08795fcdadace64d1fa3cd93855f09c519cd0d"
+    },
+    {
+      "path": "worker/bank-accounts.mjs",
+      "sha256": "a887bbdaf043a58ba42c0e9695ea076dc63ac0f56489f07f4c2dc214658beca9"
+    },
+    {
+      "path": "worker/bank-ai.mjs",
+      "sha256": "67001c493965df49639fa266ff02e79eb594c62493561c34c97dbd25a9912427"
+    },
+    {
+      "path": "worker/bank-alipay.mjs",
+      "sha256": "607b76e1521c45dd6717729442aae551960959f65afa16b9c8f4db16738c87b5"
+    },
+    {
+      "path": "worker/bank-api.mjs",
+      "sha256": "0d057d817cacb8ab184200673bfbeee13e3a6a34946e74dbeaea4bf8d86da312"
+    },
+    {
+      "path": "worker/bank-auth.mjs",
+      "sha256": "a706b9d1fdaccdcae9deaaf2d9d8151d109c788f5e26f011cbe273e269d0ebae"
+    },
+    {
+      "path": "worker/bank-book.mjs",
+      "sha256": "21bc35fe3f1d79aa7445053e2bbd790def54fa9c417dc33e84b45781c6b980c1"
+    },
+    {
+      "path": "worker/bank-bridge.mjs",
+      "sha256": "e7f3e5f9584140b5d6aea93656b547d8b7c80dd6a72bb83d2a6edbe46fbb5e0a"
+    },
+    {
+      "path": "worker/bank-closure.mjs",
+      "sha256": "2276436924e292afbed53094001dfbcdde5d9bb41d3baa0763db4336fc435eaa"
+    },
+    {
+      "path": "worker/bank-cloud-ai62.mjs",
+      "sha256": "04da93d368cde1c6c40053b613b8ffc4ba019e2a0895236d2a7918e030114cc5"
+    },
+    {
+      "path": "worker/bank-commerce.mjs",
+      "sha256": "16ca31f18e423119bf58f5e5d3e58116f5b00b1fe2dc44f04375c0d9ca2024ad"
+    },
+    {
+      "path": "worker/bank-duffel.mjs",
+      "sha256": "b94e5630ad95a734f7cfda4f4413d22261f01026f55ffbe63f22095c1199b656"
+    },
+    {
+      "path": "worker/bank-engine.mjs",
+      "sha256": "2533f7dd1053c5f5056754cf0c603e2e6fe857173e02ddd641ba42b5442b31ec"
+    },
+    {
+      "path": "worker/bank-finance.mjs",
+      "sha256": "e98893993d5922668149888095c26605a70da59797790261a19e6ff630a3b94c"
+    },
+    {
+      "path": "worker/bank-flight-quote63.mjs",
+      "sha256": "b399a287ad1639517ed572f44131adf4ffd4cf329c92b3e4cc056a043a2582af"
+    },
+    {
+      "path": "worker/bank-flight.mjs",
+      "sha256": "b7b58b2bb739a8b73ba87d61994180ad404b3a055ab7f493c2b8137aef41e086"
+    },
+    {
+      "path": "worker/bank-glm68.mjs",
+      "sha256": "227f692cc7e0d44e196688d79ae206399b2e8cfccbc18a56e146dafbcc39c8ba"
+    },
+    {
+      "path": "worker/bank-journeys66.mjs",
+      "sha256": "f1e686ddc56d628f85d58f3dc593eb381a19a6df820bd1a87d84b8085284f959"
+    },
+    {
+      "path": "worker/bank-life-catalog.mjs",
+      "sha256": "df0be4287ce7a2107b339f217cc08cb5c2299c933850d52c764a92efb507f93e"
+    },
+    {
+      "path": "worker/bank-life.mjs",
+      "sha256": "02e49726d4009445aa74c686560ffa6cea6f5194f4ba409c4b68b62c2373ef85"
+    },
+    {
+      "path": "worker/bank-lifestyle64.mjs",
+      "sha256": "032661ecdf7bef67c70728093875eeccc6c702b87a78f0789d75d547949615a0"
+    },
+    {
+      "path": "worker/bank-market.mjs",
+      "sha256": "4997c4058cef74631974f04ae0014a2f462e36ad4f39d317245c14e1648d0655"
+    },
+    {
+      "path": "worker/bank-scheduler.mjs",
+      "sha256": "407f5b3e2e64f1175b099c566cc1309b4dc4220976057f7d84a5e66735e4528c"
+    },
+    {
+      "path": "worker/bank-service.mjs",
+      "sha256": "74e49afb43e2cf66ea82cf2065c55ebdb0726d4ebc8a911e691a52e699b5220a"
+    },
+    {
+      "path": "worker/duffel-test-client.mjs",
+      "sha256": "6f137b8d85cebb9d4884f37ef01427538969d44f5e9641b4c472bae545a0e811"
+    },
+    {
+      "path": "worker/flight-catalog.mjs",
+      "sha256": "d1c1950099a3ea6cf1d9661cd0c42e2ed1f9e5409c3e4fd95ddbdccccecc51f4"
+    },
+    {
+      "path": "worker/flight-fx49.mjs",
+      "sha256": "98b2f37a8cf1dbec52a14515875a5d439c16d3820e377316e86e3ee138d241bc"
+    },
+    {
+      "path": "worker/flight-travelers50.mjs",
+      "sha256": "684043d1de7bf96f5f4446ae160747d8afdcbabf7a946c87887394310b4ab262"
+    },
+    {
+      "path": "worker/gold-history.mjs",
+      "sha256": "4c5e95ae20a2f8bd6d4dcc2b09e82c0ab7e47dc8f49b3573e86768b467b7354e"
+    },
+    {
+      "path": "worker/variflight52.mjs",
+      "sha256": "90d66e516bb515f0db5a16db750ff9572a37a5464f204178b6f7d5fcba092895"
+    },
+    {
+      "path": "worker/virtual-flight53.mjs",
+      "sha256": "106d44ad894affcae1afce9e4fa499bd8d4b86e5bb039917bcd256aec3339fea"
+    }
+  ]
+}

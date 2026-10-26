@@ -1,0 +1,11 @@
+import {createRequire} from 'node:module';
+const require=createRequire('<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/package.json');
+const {chromium}=require('playwright');
+const browser=await chromium.launch({headless:true,channel:'msedge'});const page=await browser.newPage({viewport:{width:1440,height:1000}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+await page.goto('http://127.0.0.1:4179/bank/');await page.getByRole('button',{name:'开启免密码测试',exact:true}).click();await page.locator('.nav').waitFor();
+for(const view of ['overview','transfer','bills','invest','cards','subscriptions','plans','tasks','profile','demo']){await page.locator('.nav [data-view="'+view+'"]').click();await page.locator('#content').waitFor();}
+await page.locator('.nav [data-view="tasks"]').click();await page.locator('[data-form=workflow] [name=name]').fill('浏览器生日验收');await page.locator('[data-form=workflow] [name=at]').fill('2026-12-20T09:00');await page.locator('[data-form=workflow] [name=amount]').fill('1000');await page.locator('[data-form=workflow] button').click();await page.locator('#confirm[open]').waitFor();await page.locator('[data-form=confirm] button[type=submit]').click();await page.locator('#confirm').waitFor({state:'hidden'});await page.getByRole('heading',{name:'浏览器生日验收',exact:true}).waitFor();await page.screenshot({path:'output/bank17-tasks-desktop.png',fullPage:true});
+await page.locator('.nav [data-view="transfer"]').click();await page.locator('[data-form=transfer] [name=amount]').fill('200');await page.locator('[data-form=transfer] button[type=submit]').click();await page.locator('#confirm[open]').waitFor();await page.locator('[data-form=confirm] button[type=submit]').click();await page.locator('#confirm').waitFor({state:'hidden'});
+await page.reload();await page.locator('.nav').waitFor();
+await page.setViewportSize({width:390,height:844});await page.locator('.nav [data-view="tasks"]').click();await page.screenshot({path:'output/bank17-tasks-mobile.png',fullPage:true});
+console.log(JSON.stringify({errors,bodyWidth:await page.locator('body').evaluate(x=>x.scrollWidth),viewport:390}));await browser.close();if(errors.length)process.exit(1);

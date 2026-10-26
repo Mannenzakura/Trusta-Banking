@@ -1,0 +1,10 @@
+import http from 'node:http';
+import {readFileSync} from 'node:fs';
+import path from 'node:path';
+import {DatabaseSync} from 'node:sqlite';
+import {bankAPI} from '../worker/bank-api.mjs';
+import {protect} from './security-guard.mjs';
+const db=new DatabaseSync(':memory:');for(const file of ['0005_bank_demo.sql','0006_bank_accounts.sql','0007_bank_due.sql','0010_bank_alipay_sandbox.sql','0011_bank_commerce_sandbox.sql'])db.exec(readFileSync(new URL('../drizzle/'+file,import.meta.url),'utf8'));
+const env={BANK_COMMERCE_SANDBOX_ENABLED:'true',BANK_TEST_MODE:'true',BANK_REQUIRE_MFA:'true',AUTH_BURST:{limit:async()=>({success:true})},API_BURST:{limit:async()=>({success:true})},DB:{prepare(sql){return {bind(...args){return {async all(){return {results:db.prepare(sql).all(...args)}},async first(){return db.prepare(sql).get(...args)},async run(){return {meta:db.prepare(sql).run(...args)}}}}}}}};
+const root=path.resolve('public');
+http.createServer(async(req,res)=>{try{const chunks=[];for await(const c of req)chunks.push(c);const body=Buffer.concat(chunks);const request=new Request('http://127.0.0.1:4191'+req.url,{method:req.method,headers:req.headers,...(body.length?{body}: {})});const result=await protect(request,env,async r=>{const u=new URL(r.url);if(u.pathname==='/api/bank')return bankAPI(r,env);const target=path.resolve(root,'.'+decodeURIComponent(u.pathname)+(u.pathname.endsWith('/')?'index.html':''));if(!target.startsWith(root+path.sep))return new Response('Forbidden',{status:403});try{return new Response(readFileSync(target),{headers:{'Content-Type':({'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml','.woff2':'font/woff2'})[path.extname(target)]||'application/octet-stream'}});}catch{return new Response('Not found',{status:404});}});res.writeHead(result.status,Object.fromEntries(result.headers));res.end(Buffer.from(await result.arrayBuffer()));}catch(e){res.writeHead(500);res.end(String(e));}}).listen(4191,'127.0.0.1',()=>console.log('Bank QA http://127.0.0.1:4191/bank/'));

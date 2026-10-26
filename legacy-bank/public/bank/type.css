@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Noto Sans SC';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/bank/fonts/noto-sans-sc-ui-0.woff2) format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans SC';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/bank/fonts/noto-sans-sc-ui-1.woff2) format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans SC';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/bank/fonts/noto-sans-sc-ui-2.woff2) format('truetype');
+}
+
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}

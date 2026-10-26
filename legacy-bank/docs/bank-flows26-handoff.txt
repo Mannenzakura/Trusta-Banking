@@ -1,0 +1,9 @@
+Flows26 — 2026-10-11
+Deployment: https://mannenzakura.cn/bank/?v=20261011-flows26
+Worker version: eb67dd6e-3af9-4861-b65d-8aa8f53c23c7
+Changes: four transfer methods; card workspace sections; grouped risk questions; structured receipt and transaction details; gold holding/record disclosures; benefit rule dialog; shared confirmation/result UI; mobile form/dialog rules; preserved disabled buttons; immediate navigation; inline form errors.
+Security/backend: no financial engine/auth changes. Test mode retained. Existing password/MFA, per-card balances, limits and idempotency tests remain passing.
+Tests: 68/68 automated bank tests. Local UI: transfer completion/receipt; bank transfer cancellation; AA navigation; R5 test assessment; gold 800 buy/1 gram holding/full redemption/records; credit creation/20 spend/20 repay/disabled repayment; card customization controls; subscription cancel/restore; event creation/pending result/cancel; benefit claim/use. Desktop 1440, mobile390/360; no console errors seen. Credit selected for event rejected by server.
+Deployment verification: index.html, app.js, experience26.js and experience26.css all HTTP200 and SHA256 match local bytes.
+Limitation: final online browser visual verification timed out. Local screenshots are from the same deployed files.
+Evidence: output/flows26-tests.log; output/flows26-deploy.log; output/flows26-transfer-desktop.png; output/flows26-transfer-mobile.png; output/flows26-result-mobile.png.

@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {writeFileSync} from 'node:fs';
+const base=process.argv[2]||'http://127.0.0.1:4191';let cookie='';
+const call=async body=>{const r=await fetch(base+'/api/bank',{method:'POST',headers:{origin:base,cookie,'content-type':'application/json'},body:JSON.stringify(body)});if(r.headers.get('set-cookie'))cookie=r.headers.get('set-cookie').split(';')[0];const m=await r.json();assert.equal(r.status,200,m.error);return m;};
+await call({action:'enterTest'});let m=await call({action:'init'});const balance=m.state.balance,card=m.state.card.id,date=new Date(m.state.now+3*86400000).toISOString().slice(0,10);
+const run=async operation=>{const p=await call({action:'prepare',operation});return call({action:'confirm',id:p.state.pending.id});};
+m=await run({type:'flightCreate',outbound:'SZX-SHA-'+date+'-0',cabin:'economy',passengers:'TEST-QA001',contact:'TEST-QACONTACT'});const id=m.state.flightOrders[0].id;assert.equal(m.state.balance,balance);
+m=await run({type:'flightPay',order:id,cardId:card});assert.equal(m.state.flightOrders[0].status,'paid');assert.equal(m.state.balance,balance-66000);
+m=await run({type:'flightIssue',order:id});assert.ok(m.state.flightOrders[0].ticket.startsWith('TEST-'));
+m=await run({type:'flightRefund',order:id});assert.equal(m.state.balance,balance-5800);assert.equal(m.state.flightOrders[0].status,'refunded');assert.equal(m.state.flightOrders[0].ticket,null);assert.equal(m.state.receipts.filter(r=>r.orderId===id).length,4);assert.equal(m.bookStatus.balanced,true);
+m=await call({action:'init'});assert.equal(m.state.flightOrders[0].status,'refunded');
+writeFileSync('output/flights43-'+(base.includes('127.0.0.1')?'local':'online')+'.json',JSON.stringify({id,base,passed:true,states:['pending','paid','ticketed','refunded'],fee:5800,receipts:4,balanced:true},null,2));console.log('PASS persisted flight create/pay/issue/refund, 4 receipts and balanced ledger');

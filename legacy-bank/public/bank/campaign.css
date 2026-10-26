@@ -1,0 +1,38 @@
+/* Campaign palette: ivory #fffaf1, gold #b18a49, ink #243f32, peach #f5e1d1, white #fff. */
+.bank-home-stage{background:#fffaf1;box-shadow:0 16px 50px #6f542510;border:1px solid #eee5d5}
+.bank-feature{padding:0;gap:0;grid-template-columns:1fr 1fr;min-height:340px}
+.bank-feature>div:first-child{padding:38px 36px}
+.bank-feature h2{font-size:clamp(26px,2.6vw,38px);line-height:1.5;letter-spacing:-1px}
+.bank-feature p{line-height:1.9;color:#615b4b}
+.campaign-art{margin:0;position:relative;overflow:hidden;min-width:0;align-self:stretch}
+.campaign-art img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.campaign-art figcaption{position:absolute;right:12px;bottom:10px;font-size:10px;line-height:1.5;color:#fff;background:#30231580;border-radius:4px;padding:3px 6px}
+.campaign-hero{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:0;overflow:hidden;border:1px solid #eae1d6;box-shadow:0 12px 36px #7058370a}
+.campaign-copy{padding:40px;align-self:center}
+.campaign-copy>span,.bank-feature-kicker{font-size:13px;font-weight:600;display:inline-block;border:1px solid #b18a4950;border-radius:6px;padding:6px 10px;color:#705326;background:#fff8e8}
+.campaign-copy p{line-height:1.8;color:#5a564d;max-width:400px}
+.bank-wealth-heading{background:#fff8f2}
+.bank-wealth-tabs{grid-column:1/-1;background:#fff;margin:0;padding:18px 30px;border-top:1px solid #eee2d7}
+.bank-wealth-tabs button{font-weight:600;background:#faf8f4;border-color:#e8e0d5;min-height:44px}
+.bank-life-hero{background:#fff8ed}
+.campaign-teaser{padding:0 26px 26px;display:block;background:#fff8ed;overflow:hidden;border:1px solid #eee5d5}
+.campaign-teaser .campaign-art{margin:0 -26px 22px;height:185px}
+.campaign-teaser h2{font-size:23px}
+.campaign-teaser p{font-size:14px;line-height:1.8}
+.bank-service-panel{border:1px solid #edf0ea;box-shadow:0 10px 28px #243f3205}
+.bank-service-icon{width:48px;height:48px;border-radius:15px;background:linear-gradient(145deg,#f1fbf5,#c9e6d5);color:#23684e;border:1px solid #ffffff;box-shadow:inset 0 2px 2px #fff,0 5px 9px #23553b12;position:relative;transition:transform .2s,box-shadow .2s}
+.bank-service-icon:after{content:'';position:absolute;inset:3px 5px auto;height:15px;border-radius:11px;background:linear-gradient(#ffffff80,#fff0);pointer-events:none}
+.bank-service-grid button:nth-child(5n+2) .bank-service-icon{background:linear-gradient(145deg,#eef4ff,#c7d9f2);color:#38689a}
+.bank-service-grid button:nth-child(5n+3) .bank-service-icon{background:linear-gradient(145deg,#fff5df,#efd2a0);color:#906323}
+.bank-service-grid button:nth-child(5n+4) .bank-service-icon{background:linear-gradient(145deg,#fff0eb,#f4ccbc);color:#a75b43}
+.bank-service-grid button:nth-child(5n+5) .bank-service-icon{background:linear-gradient(145deg,#f4efff,#dcd0ef);color:#776092}
+.bank-service-icon svg{width:27px;height:27px;stroke-width:1.7;filter:drop-shadow(0 1px 0 #fff)}
+.bank-primary-services{background:linear-gradient(110deg,#f4e8cf,#fffaf0);padding:22px;border-color:#eadcc3}
+.bank-primary-services .bank-service-icon{background:linear-gradient(145deg,#fffdf5,#edddbc);color:#8b682d}
+.bank-product-previews button{padding:14px;border:1px solid #ece7dc;border-radius:12px;background:linear-gradient(150deg,#fffdf8,#f8f4eb)}
+.bank-product-previews button:last-child{border:1px solid #ece7dc}
+.bank-product-previews h3{line-height:1.6}
+.bank-product-previews strong{color:#865422}
+@media(hover:hover){.bank-service-grid button:hover .bank-service-icon{transform:translateY(-3px);box-shadow:inset 0 2px 2px #fff,0 9px 16px #23553b20}.campaign-art:hover img{transform:scale(1.035)}}
+@media(max-width:760px){.bank-feature,.campaign-hero{grid-template-columns:1fr}.bank-feature>div:first-child,.campaign-copy{padding:25px 24px}.bank-feature h2{font-size:27px;line-height:1.45}.bank-feature p{font-size:14px;line-height:1.8}.campaign-art{height:205px}.campaign-art img{object-position:center 53%}.campaign-copy h1{font-size:28px}.campaign-copy p{font-size:14px}.bank-wealth-tabs{padding:16px;gap:8px}.bank-wealth-tabs button{font-size:13px;padding:10px 12px}.bank-service-icon{width:39px;height:39px;border-radius:12px}.bank-service-icon svg{width:24px;height:24px}.bank-primary-services{padding:17px 8px}.bank-primary-services .bank-service-icon{width:44px;height:44px}.bank-service-grid strong{font-size:12px;color:#263b30}.bank-primary-services strong{font-size:14px}.bank-product-previews{grid-template-columns:1fr;gap:10px}.bank-product-previews button{display:grid;grid-template-columns:1fr auto;align-items:center;gap:4px 12px;padding:16px}.bank-product-previews button span,.bank-product-previews button p{grid-column:1/-1;margin:0}.bank-product-previews h3{margin:5px 0;font-size:16px}.bank-product-previews strong{font-size:21px}.bank-product-previews small{display:inline}.campaign-teaser .campaign-art{height:190px}.bank-home-columns{margin:22px 0}.bank-feature-kicker,.campaign-copy>span{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.campaign-art img,.bank-service-icon{transition:none}.campaign-art:hover img{transform:none}}

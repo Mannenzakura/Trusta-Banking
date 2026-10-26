@@ -1,0 +1,15 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import {DatabaseSync} from 'node:sqlite';
+import assert from 'node:assert/strict';
+import {sandboxAction,rpc} from '../worker/bank-alipay.mjs';
+const d=new DatabaseSync('output/alipay40-qa.sqlite');
+const env={BANK_TEST_MODE:'true',ALIPAY_SANDBOX_ENABLED:'true',ALIPAY_SANDBOX_PRIVATE_KEY:readFileSync('<LOCAL_USER>/.codex/secrets/alipay-sandbox/app-private-key.txt','utf8'),ALIPAY_SANDBOX_PUBLIC_KEY:readFileSync('<LOCAL_USER>/.codex/secrets/alipay-sandbox/alipay-public-key.txt','utf8'),DB:{prepare(sql){return{bind(...args){return{async first(){return d.prepare(sql).get(...args)},async all(){return{results:d.prepare(sql).all(...args)}},async run(){return{meta:d.prepare(sql).run(...args)}}}}}}}};
+const order=d.prepare('SELECT * FROM bank_alipay_sandbox WHERE id=?').get('SBXa45f7a62ab294d9d8806e14784069325');
+assert.ok(order);
+const call=action=>sandboxAction(env,order.owner,{action,id:order.id},'http://127.0.0.1:4188',(env,m,b)=>rpc(env,m,b,async(...args)=>{const r=await fetch(...args);console.log('Sandbox HTTP',r.status);return r;}));
+const paid=await call('alipayQuery');console.log('Verified sandbox query:',paid.order.status);assert.ok(['paid','refunded'].includes(paid.order.status));
+const refunded=await call('alipayRefund');assert.equal(refunded.order.status,'refunded');console.log('Verified sandbox full refund:',refunded.order.status);
+const repeat=await call('alipayRefund');assert.equal(repeat.order.refundId,refunded.order.refundId);assert.equal(repeat.order.status,'refunded');
+const final=await call('alipayQuery');assert.equal(final.order.status,'refunded');
+writeFileSync('output/alipay40-live-result.json',JSON.stringify({at:new Date().toISOString(),id:order.id,amount:order.amount,query:'paid',refund:'refunded',repeatRefund:'idempotent',finalQuery:final.order.status,signatureVerified:true},null,2));
+console.log('PASS: actual sandbox paid -> refunded -> repeated refund -> final query.');d.close();

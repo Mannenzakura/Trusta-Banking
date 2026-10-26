@@ -1,0 +1,29 @@
+from pathlib import Path
+p=Path('public/bank/app.js');s=p.read_text(encoding='utf-8')
+s=s.replace("['profile','个人中心']]","['profile','个人中心'],['inbox','消息与待办'],['receipts','交易回执'],['demo','比赛演示']]")
+s=s.replace("let billFilter='all'", "let authMode='login',inboxFilter='all';\nlet billFilter='all'")
+s=s.replace("if(data.needsSession)return api({action:'init'});", "if(data.needsSession)return api({action:'init'});if(data.loginComplete)return api();")
+s=s.replace('function lockScreen(){','function legacyLockScreen(){',1)
+pos=s.index('function legacyLockScreen()')
+new=r'''
+function authPasswords(){return passwordField('登录密码','loginPassword')+passwordField('再次输入登录密码','loginConfirm')+passwordField('转账密码','paymentPassword')+passwordField('再次输入转账密码','paymentConfirm');}
+function accountNameField(){return field('账号',`<input name="username" autocomplete="username" pattern="[a-z][a-z0-9_]{5,31}" minlength="6" maxlength="32" value="${esc(model.account||'')}" required>`,'6–32 位小写字母、数字或下划线，以字母开头。');}
+function lockScreen(){if(model.recoveryKey)return `<main class="vault-entry"><h1>请保存恢复密钥</h1><p>账号：${esc(model.account)}</p><p>这是找回账户的唯一凭证，仅此刻展示。请保存在你的密码管理器或安全的离线位置；不要发送给其他人。</p><label>恢复密钥<textarea readonly rows="3">${esc(model.recoveryKey)}</textarea></label><p>找回成功后密钥会轮换，旧密钥失效。此站点不发送短信或邮件。</p>${btn('我已保存，前往登录','recoverySaved','primary')}</main>`;
+ if(authMode==='legacy'&&!model.accountMode)return legacyLockScreen();
+ const mode=authMode==='legacy'?'login':authMode;
+ return `<main class="vault-entry"><a href="/">MANNENZAKURA</a><div class="vault-emblem">${icon('shield')}</div><p>个人银行 · 持久模拟账户</p><h1>${mode==='register'?'建立你的个人账户':mode==='recover'?'找回账户':'先生，欢迎回来。'}</h1><p>登录会话到期后重新登录即可，账本、卡面与计划继续保留，支持跨设备访问。</p><div class="tabs">${[['login','登录'],['register','注册'],['recover','找回密码']].map(([id,label])=>`<button type="button" data-action="authMode" data-mode="${id}" class="${mode===id?'selected':''}">${label}</button>`).join('')}</div><form data-form="accountAuth" data-mode="${mode}">${accountNameField()}${mode==='login'?passwordField('登录密码','password','current-password'):(mode==='recover'?field('恢复密钥','<input name="recoveryKey" autocomplete="off" minlength="48" maxlength="48" required>'):'')+authPasswords()}${mode!=='login'?'<p>两套密码须不同，各为 12–128 位，包含字母和数字。请使用本站专用密码。</p>':''}<button class="btn primary">${mode==='login'?'登录个人银行':mode==='register'?'注册并生成恢复密钥':'重设密码并轮换恢复密钥'}</button></form><small>模拟资金，不连接真实银行。注册与找回均不收取费用。<br>恢复密钥丢失且忘记密码时，暂不提供人工找回。</small>${!model.accountMode?btn('访问旧浏览器账户，迁移原有数据','authMode','','data-mode="legacy"'):''}</main>`;}
+function migrationForm(){return `<details class="password-setting"><summary>迁移为持久账户 ${icon('arrow')}</summary><p>设置一个账号，并填写旧账户现有的两套密码。迁移后可跨设备登录，原账本和卡面保留。</p><form data-form="accountAuth" data-mode="register" data-migrate="true">${accountNameField()}${authPasswords()}<button class="btn primary">迁移并生成恢复密钥</button></form></details>`;}
+'''
+s=s[:pos]+new+s[pos:]
+s=s.replace('contacts:contactPage,fx,profile}[view]','contacts:contactPage,fx,profile,inbox,receipts,demo}[view]')
+s=s.replace("const kind=f.dataset.form;", "const kind=f.dataset.form;if(kind==='accountAuth')act({action:f.dataset.mode,...d,migrate:f.dataset.migrate==='true'});if(kind==='planPayment')act({action:'prepare',operation:{type:'planPayment',plan:f.dataset.plan,amount:Number(d.amount),merchant:d.merchant}});")
+s=s.replace("case'lock':", "case'authMode':authMode=d.mode;render();break;case'recoverySaved':delete model.recoveryKey;authMode='login';render();break;case'logout':act({action:'logout'});break;case'inboxFilter':inboxFilter=d.filter;render();break;case'readNotice':act({action:'readNotification',id:d.id});break;case'noticeOpen':act({action:'readNotification',id:d.id}).then(()=>navigateBank(d.view));break;case'taskToggle':act({action:'taskToggle',plan:d.plan,task:d.task});break;case'completeEvent':act({action:'completeEvent',id:d.id},'活动已完成，剩余预留资金已释放');break;case'demoSeed':act({action:'demoSeed',scenario:d.scenario},'演示指引已载入').then(()=>navigateBank(d.view));break;case'receiptDownload':downloadReceipt(d.id,d.kind);break;case'lock':")
+s=s.replace('<p>当前浏览器的个人模拟账户</p>',"<p>${model.account?'持久账号：'+esc(model.account):'旧浏览器模拟账户 · 尚未迁移'}</p>")
+s=s.replace("${btn('立即锁定账户','lock')}</section>","${!model.accountMode?migrationForm():''}${btn('立即锁定账户','lock')}${model.accountMode?btn('退出登录','logout'):''}</section>")
+s=s.replace('当前为浏览器 Cookie 绑定的比赛模拟账户，不是实名银行账号。Cookie 清除或 7 天有效期结束后无法恢复原账户；尚未接入手机验证与找回密码服务。重置模拟账本不会清除你的密码。',"${model.accountMode?'账户数据独立保存；Cookie 到期只需重新登录。忘记密码可用注册时保存的恢复密钥找回，找回后所有设备需重新登录。':'旧浏览器账户仍依赖 Cookie，请使用上方迁移入口保留数据。'}重置模拟账本不会清除密码与账号。")
+s=s.replace('<button class="text-btn" data-action="search">搜索功能</button>', '<button class="text-btn" data-action="search">搜索功能</button><button class="text-btn" data-action="nav" data-view="inbox">消息 ${model.notifications?.filter(n=>!n.read).length||0}</button>')
+s=s.replace("note:d.note}),bankTransfer", "note:d.note,tasks:(d.tasks||'').split('\\n').map(x=>x.trim()).filter(Boolean)}),bankTransfer")
+s=s.replace("${field('安排与备注',", "${!p.id?field('分步安排（每行一步）','<textarea name=\"tasks\" maxlength=\"960\" placeholder=\"核对日期&#10;购票提醒&#10;住宿确认&#10;费用分摊\"></textarea>','最多 12 步。完成状态由你手动更新，付款另行确认。'):''}${field('安排与备注',")
+s=s.replace("return `<p>${esc(p.category)}", "return `${taskList(p)}<p>${esc(p.category)}")
+s=s.replace("${p.status==='scheduled'?btn('暂停提醒'", "${btn('完成活动并释放剩余预算','completeEvent','',`data-id=\"${p.id}\"`)}${p.amount>0?`<details class=\"event-editor\"><summary>从计划预算模拟付款</summary><form data-form=\"planPayment\" data-plan=\"${p.id}\">${field('模拟商户','<input name=\"merchant\" maxlength=\"60\" required>')}${field('付款金额（元）',`<input name=\"amount\" type=\"number\" min=\"0.01\" max=\"${p.amount/100}\" step=\"0.01\" required>`)}<button class=\"btn\">核对付款</button></form></details>`:''}${p.status==='scheduled'?btn('暂停提醒'")
+p.write_text(s,encoding='utf-8')

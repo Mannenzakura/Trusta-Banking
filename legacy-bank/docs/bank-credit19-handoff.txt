@@ -1,0 +1,8 @@
+Credit19 — 2026-10-11
+Deployed worker 9dab8652-542e-453b-995a-b3bf4921bb0d.
+53 bank tests pass. Local browser verified apply -> 600 spend -> 200 repay -> next billing date -> 400 repay -> statement paid, available credit 10000.
+Public app.js SHA256 equals deployed local source; HTTP200. Live browser homepage loads, subsequent cards UI automation timed out.
+Credit principal ledger is separate from cash. Monthly first-day statements; due20days later. No interest, minimum payment, installments, cash advances. Locked credit cards can be repaid, cannot spend. Confirmation/credentials/MFA use existing pipeline; test mode remains.
+II class is per-card daily10000/annual200000 incoming/outgoing caps, Beijing natural dates; investment excluded, repayment included conservatively. Debit cash ledger remains shared. No bound transfers or deposit/withdrawal channel. Not full regulatory account simulation.
+Scheduled transfers, subscriptions and workflow payments recheck quotas; no automatic over-limit debit. Report excludes repayment from spending to avoid double counting.
+Files: worker/bank-engine.mjs worker/bank-api.mjs public/bank/app.js navigation.css index.html tests/bank-credit.test.mjs

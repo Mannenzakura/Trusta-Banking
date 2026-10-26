@@ -1,0 +1,15 @@
+支付宝沙箱业务订单接入 — 2026-10-12
+状态：实现和自动化测试完成，尚未部署；等待用户完成实际沙箱商品付款。
+本地：http://127.0.0.1:4189/bank/?commerce=return
+待付门店订单：CSB0e426a5c1cee409c858104376f674dd0，29元沙箱余额。
+本地服务 scripts/bank-qa41-server.mjs / output/commerce41-qa.sqlite；服务器仍在运行。
+核验脚本：node scripts/verify-commerce41-paid.mjs；脚本查询真实沙箱签名结果，付款后原路退款并验证回执和权益撤销。
+订单15分钟付款窗口，如过期应在生活页面新建订单；验证脚本选择最新订单。
+自动测试：node --test tests/*.test.mjs，152/152通过，output/commerce41-tests.log。
+浏览器已验证：进入测试→生活→门店商品→核对购买→创建订单→沙箱收银台链接；390px手机弹窗无裁切。
+数据库新迁移：drizzle/0011_bank_commerce_sandbox.sql，尚未在远程执行。
+构建资产：已执行 scripts/prepare-security.mjs，尚未发布。
+部署：实际沙箱业务单核验通过后，先执行0011远程D1迁移，再使用既有wrangler.cloudflare.json部署。
+安全：沙箱网关/APP_ID固定，RSA2验签，Origin与测试会话隔离，服务端目录定价，创建幂等、固定退款号重试、退款/核销/发货条件更新互斥；不改变银行卡余额与原账本；私钥仅服务端。
+范围：4种门店权益券、3种现金商城商品；积分商城保留积分支付；测试地址仅TEST格式；不连接真实商户/物流。
+未触碰个人支付宝登录凭据，未申请收费服务，未发起真实交易。

@@ -1,0 +1,51 @@
+/* Unified retail banking palette; card artwork and market direction colors stay independent. */
+:root{--ink:#24252a;--muted:#62636b;--line:#e5e5e8;--surface:#f6f6f8;--accent:#c92840;--primary:#c92840;--green:#c92840}
+html,body,#app,.layout,.layout .shell,.layout .workspace,.layout .main{background:#f6f6f8;color:#24252a}
+.layout .sidebar,.layout .topbar{background:#fff;border-color:#e8e8eb}
+.layout .brand,.layout .crumb,.layout .nav,.layout .top-actions,.layout .heading h1,.experience26 :is(h1,h2,h3),.layout .bank-home-welcome h1{color:#24252a}
+.brandmark{background:#c92840!important;color:#fff!important}
+.experience26{--ink:#24252a;--muted:#62636b;--line:#e5e5e8;--surface:#f6f6f8;color:#24252a}
+.layout :is(.panel,.bank-service-panel,.bank-editorial,.card-control-room,.card-showroom,.transfer-compose,.recipient-directory article,.investment-product,.receipt-document,.renewal-item,.plan-composer,.risk-disclosure,.profile-settings>section,.bank-personal-hub,.bank-personal-spending,.gold-product){background:#fff;border-color:#e5e5e8;box-shadow:0 8px 30px #20203004}
+.layout :is(p,small,.muted,.sub,.field small,.wallet-note,.service-form-heading p,.bank-home-welcome time,.bank-home-welcome p){color:#62636b}
+.layout :is(.btn,.text-btn,.icon-button,.bank-helper,.bank-service-grid button,.security-link,.nav button){color:#3d3e45;border-color:#dedee3}
+.layout .btn.primary,#confirm .btn.primary,.vault-entry .btn.primary{background:#c92840;color:#fff;border-color:#c92840;box-shadow:0 5px 16px #c928401a}
+.layout .btn.primary:hover,#confirm .btn.primary:hover{background:#ad1f35;border-color:#ad1f35}
+.layout .btn:not(.primary):not(.danger){background:#fff}
+.layout .btn.danger,#confirm .btn.danger{color:#b72239;background:#fff0f2;border-color:#edc4cc}
+.layout :is(input,select,textarea),#confirm .modal :is(input,select){color:#24252a;border-color:#cdced4;background:#fff;accent-color:#c92840}
+.layout :is(input,select,textarea,button,a,summary):focus-visible,#confirm :is(input,select,button):focus-visible{outline:3px solid #e99caa;outline-offset:3px}
+.layout :is(.nav button:hover,.nav button.active,.nav [aria-current=page],.bank-mobile-tabs [aria-current=page],.tabs .selected,.workspace-switch button[aria-pressed=true],.method-picker button[aria-pressed=true]){color:#b62139;background:#fff0f2;border-color:#d65165}
+.layout .method-picker button[aria-pressed=true]{box-shadow:inset 0 3px #c92840}
+.layout :is(.method-picker button,.workspace-switch button){color:#383940}.layout .method-picker small{color:#686970}
+.layout :is(.workspace-switch,.transfer-pocket,.confirmation-details,.receipt-detail,.notice,.timeline-detail,.credit-hub,.schedule-choice,.bank-notice,.card-limit-display){background:#f5f5f7;border-color:#e1e1e6;color:#45464f}
+.layout .transfer-pocket h2,.layout .receipt-detail strong,.layout .assessment-section legend{color:#292a31}
+.layout .recipient-choice label:has(input:checked){background:#fff2f4;border-color:#c92840}
+.layout details[open]>summary{background:#f7f7f9;border-color:#e5e5e8;color:#303139}
+.layout :is(.receipt-sheet,.gold-record-detail .retail-record,.investment-holdings .subscription){background:#fafafb;border-color:#e5e5e8}
+.layout .receipt-sheet span{color:#62636b}.layout .receipt-sheet strong{color:#292a31}
+.layout .bank-mobile-tabs{background:#fffffff5;border-color:#e5e5e8;box-shadow:0 -8px 25px #20203008}
+.layout .bank-mobile-tabs button{color:#666771}.layout .bank-service-grid button:hover{background:#f6f6f8}
+.layout :is(.bank-wealth-header,.investment-intro,.bank-life-teaser,.benefits-intro,.benefit-detail-ticket,.planning-outlook,.subscription-outlook,.bank-account-link){background:linear-gradient(120deg,#f4ebd9,#fffcf5);color:#4d3c26;border-color:#e8d8ba}
+.layout :is(.bank-wealth-header,.investment-intro,.bank-life-teaser,.planning-outlook,.subscription-outlook,.bank-account-link) :is(h1,h2,strong){color:#503c23}
+.layout :is(.bank-wealth-tabs,.retail-pills,.statement-filters,.subscription-filters) button{background:#fff;color:#57535a;border-color:#e5e0d7}
+.layout :is(.bank-wealth-tabs,.retail-pills,.statement-filters,.subscription-filters) button[aria-pressed=true]{background:#f5ebd8;color:#785621;border-color:#c4a572}
+.layout :is(.bank-product-previews button,.product-purchase,.retail-coupon){background:#fffdf9;border-color:#e9dfcd}
+.layout .bank-product-previews strong,.layout .product-spec strong{color:#8a6029}
+.layout .gold-hero{background:linear-gradient(115deg,#0d2136,#183651);color:#f7ead1}
+.layout .gold-hero :is(h1,h2,p,span){color:#f7ead1}.layout .gold-hero .btn{background:#f3dfb9;color:#34271a;border-color:#f3dfb9}
+.layout .gold-tabs button{background:#fff;color:#23374b;border-color:#dfe3e8}.layout .gold-tabs button[aria-pressed=true]{background:#142d46;color:#f4dfb6;border-color:#142d46}
+.layout .gold-balance{background:linear-gradient(120deg,#10283e,#1b3b57);color:#f7ead1}.layout .gold-balance :is(p,strong,span){color:#f7ead1}
+.layout .gold-balance .btn.primary{background:#e8c98f;color:#172b40;border-color:#e8c98f}
+.layout .gold-price strong{color:#795420}.layout .quote-card,.layout .quote-panel{background:#fff;border-color:#e2e4e8}
+#confirm{background:#fff;border-color:#e3e3e8;box-shadow:0 30px 100px #15203540}#confirm::backdrop{background:#17213080}
+#confirm .modal{color:#292a31;background:#fff}#confirm .modal :is(h2,h3){color:#292a31}#confirm .modal p{color:#5d6069}
+#confirm .confirmation-details{background:#f7f7f9;border-color:#e2e2e7}#confirm .confirmation-details p{border-color:#e4e4e8;color:#34363e}
+#confirm .flow-steps{color:#73747b}#confirm .flow-steps span{background:#eeeef1}#confirm .flow-steps [aria-current]{color:#b62139}#confirm .flow-steps [aria-current] span{background:#c92840;color:#fff}
+#confirm .confirmation-symbol{background:#fff0f2;color:#c92840}#confirm .result-seal{background:#eaf5ef;color:#26734a}
+#confirm .result-amount strong{color:#24252a}#confirm .result-amount span{color:#62636b}
+#confirm .benefit-detail-ticket{background:linear-gradient(120deg,#f6ebd4,#fffaf0)}#confirm .form-footer{background:#fff;border-color:#e5e5e8}
+.layout .tag.green,#confirm .tag.green{background:#eaf5ef;color:#26734a}.layout .tag.amber{background:#faf0dc;color:#856020}
+.layout .notice{border-left-color:#bd9a5e}.layout .footer{color:#777780}.layout .bank-personal-heading .recipient-avatar{background:#f6ebd8;color:#8a642f}
+@media(max-width:760px){.layout .sidebar,.layout[data-page] .topbar{background:#fff}.layout .main{background:#f6f6f8}.layout .bank-mobile-tabs{padding-bottom:calc(8px + env(safe-area-inset-bottom))}#confirm .modal .form-footer{background:#fff}}
+.layout .recipient-avatar{background:#f0e6d6;color:#765d38}.layout :is(.recipient-choice legend,.pocket-label,.selected-card-name,.transfer-available,.nav-group-trigger,.nav-group button,.crumb b,.brand small,.bank-guide summary){color:#3b3d45}.layout .bank-guide{background:#fff;border-color:#e5e5e8}.layout .merchant-icon{background:#f1f1f5;color:#666771}.layout .personal-assurance{color:#686b73}.layout .bank-service-icon{color:#746045}.layout .bank-primary-services .bank-service-icon{background:#fffaf0;color:#987238}
+.layout .wallet-item{background:#fff;border-color:#e2e2e7;color:#35363e}.layout .wallet-item.selected{background:#fff2f4;border-color:#cb5266}.layout .wallet-current{background:#c92840;color:#fff}.layout .bank-wealth-heading{background:linear-gradient(120deg,#f5ebd8,#fffaf2)}.layout .gold-hero .btn:not(.primary):not(.danger){background:#f3dfb9;color:#34271a;border-color:#f3dfb9}

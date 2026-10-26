@@ -1,0 +1,5 @@
+export const stores=[{id:'coffee',name:'拾光咖啡 · 科技园店',category:'美食饮品',address:'深圳 · 科技园测试街12号',hours:'08:00–21:00',product:'双人咖啡券',price:2900,face:5000,mark:'咖啡'},{id:'food',name:'南风小馆 · 南山店',category:'美食饮品',address:'深圳 · 南山测试街8号',hours:'11:00–22:00',product:'100元餐饮代金券',price:7900,face:10000,mark:'美食'},{id:'wash',name:'悦行汽车 · 科苑店',category:'汽车服务',address:'深圳 · 科苑测试街6号',hours:'09:00–19:00',product:'标准洗车一次券',price:3500,face:5000,mark:'洗车'},{id:'cinema',name:'星幕影城 · 海岸店',category:'电影娱乐',address:'深圳 · 海岸测试广场3层',hours:'10:00–23:00',product:'单人通兑券（非选座票）',price:3900,face:6000,mark:'电影'}];
+export const billers=[{id:'water',name:'测试水务',account:'TEST-WATER-001',amount:6800,category:'水费'},{id:'power',name:'测试供电',account:'TEST-POWER-001',amount:12860,category:'电费'},{id:'gas',name:'测试燃气',account:'TEST-GAS-001',amount:4560,category:'燃气'},{id:'phone',name:'测试通信',account:'TEST-MOBILE-001',amount:5000,category:'话费'}];
+export const gifts=[{id:'gift-coffee',name:'咖啡权益券',points:20,stock:1}];
+
+export const goods61=[{id:'mall-cup',name:'随行保温杯',price:8900},{id:'mall-bag',name:'轻便出行包',price:12900},{id:'mall-notebook',name:'随身笔记本',price:2900}];

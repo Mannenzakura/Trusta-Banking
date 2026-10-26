@@ -1,0 +1,18 @@
+import fs from 'node:fs/promises';
+import sharp from 'sharp';
+const dir='public/bank/assets/campaign22';
+await fs.mkdir(dir,{recursive:true});
+const sources={home:'exec-93c64208-bbd0-48d8-b3af-01650e9b2693',wealth:'exec-18c96b10-c6a9-46b5-bcec-6452e0868ccc',life:'exec-3ce73493-0d83-48af-8588-6e847d49a921'};
+for(const [name,id] of Object.entries(sources))await sharp(`<LOCAL_USER>/.codex/generated_images/01a11717-1ec9-74f1-8f3c-60d5be80b6bf/${id}.png`).resize(1200).webp({quality:85}).toFile(`${dir}/${name}.webp`);
+let app=await fs.readFile('public/bank/app.js','utf8');
+const art=(name)=>`<figure class="campaign-art"><img src="/bank/assets/campaign22/${name}.webp" width="1200" height="800" alt="" ${name==='home'?'fetchpriority="high"':'loading="lazy"'}><figcaption>原创 AI 场景图</figcaption></figure>`;
+app=app.replace(/<div class="bank-date-scene" aria-hidden="true">.*?<\/div><\/div><\/div><\/section>/,`${art('home')}</div></section>`);
+app=app.replace('<section class="bank-life-hero"><span>','<section class="bank-life-hero campaign-hero"><div class="campaign-copy"><span>');
+app=app.replace("${btn('查看可用权益','nav','primary','data-view=\"benefits\"')}</section>","${btn('查看可用权益','nav','primary','data-view=\"benefits\"')}</div>"+art('life')+'</section>');
+app=app.replace('<section class="bank-wealth-heading"><span>','<section class="bank-wealth-heading campaign-hero"><div class="campaign-copy"><span>');
+app=app.replace('<div class="bank-wealth-tabs" aria-label="理财产品分类">','</div>'+art('wealth')+'<div class="bank-wealth-tabs" aria-label="理财产品分类">');
+app=app.replace('<section class="bank-life-teaser"><span>生活权益</span>','<section class="bank-life-teaser campaign-teaser">'+art('life')+'<span>生活权益</span>');
+await fs.writeFile('public/bank/app.js',app);
+let html=await fs.readFile('public/bank/index.html','utf8');
+html=html.replaceAll('20261011-retail21','20261011-campaign22').replace('</head>','<link rel="stylesheet" href="/bank/campaign.css?v=20261011-campaign22"></head>');
+await fs.writeFile('public/bank/index.html',html);

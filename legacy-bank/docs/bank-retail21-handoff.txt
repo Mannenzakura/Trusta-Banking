@@ -1,0 +1,6 @@
+Retail21 — 2026-10-11
+Reference: five user-provided mobile bank screenshots. Adapted service hierarchy and light visual sections, not branding, commercial promises, screenshots, customer data, product yields or bank representative identities.
+Added homepage service grid, original calendar campaign linking to plans, actual notification; wealth product category filters; life page with real mock-benefit operations and existing plan/subscription links; personal hub card/task/benefit counts + spending; all services directory; mobile five-tab nav. Original overview preserved under accountOverview.
+60 bank tests pass. Local desktop and 390x844 mobile browser: homepage renders; wealth gold filter produces only gold; life benefit claim updates personal count; topbar overlap found and fixed; viewport reset.
+Deployed worker9a831849-988f-403d-b659-2f6eff6894f6. Public app.js/retail.css/index.html hash checked against source.
+Files public/bank/app.js retail.css index.html. No engine changes. No new paid service.
